@@ -1,6 +1,10 @@
 import { Heading } from '../tailwind-catalyst/heading'
+import ESP32Dialog from '../dialogs/ESP32Dialog'
+import { useState } from 'react'
 
 function SkillsSection() {
+  let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
+
   return (
     <div>
       <div className="flex w-full items-end justify-between gap-4 border-b border-zinc-950/10 pb-6 dark:border-white/10">
@@ -80,12 +84,14 @@ function SkillsSection() {
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-4 text-l">ZYBO Z7-10 FPGA</li>
-              <li className="pl-4 text-l">ESP32 MCU</li>
+              <li className="pl-4 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="no-underline hover:underline cursor-pointer text-blue-300">ESP32 MCU</button></li>
             </ul>
           </div>
         </div>
 
       </div>
+
+      <ESP32Dialog isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
     </div>
   )
 }
