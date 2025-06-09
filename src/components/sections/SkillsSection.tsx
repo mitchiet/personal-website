@@ -84,7 +84,7 @@ function SkillsSection() {
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-3 text-l">ZYBO Z7 FPGA</li>
-              <li className="pl-3 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="no-underline hover:underline cursor-pointer text-blue-300">ESP32 MCU</button></li>
+              <li className="pl-3 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="no-underline hover:underline active:underline cursor-pointer text-blue-300">ESP32 MCU</button></li>
             </ul>
           </div>
         </div>
