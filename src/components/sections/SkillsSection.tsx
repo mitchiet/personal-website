@@ -17,11 +17,11 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Dev Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">C / C++</li>
-              <li className="pl-4 text-l">Python</li>
-              <li className="pl-4 text-l">MATLAB</li>
-              <li className="pl-4 text-l">Java</li>
-              <li className="pl-4 text-l">Verilog</li>
+              <li className="pl-3 text-l">C / C++</li>
+              <li className="pl-3 text-l">Python</li>
+              <li className="pl-3 text-l">MATLAB</li>
+              <li className="pl-3 text-l">Java</li>
+              <li className="pl-3 text-l">Verilog</li>
             </ul>
           </div>
         </div>
@@ -30,13 +30,13 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">Javascript</li>
-              <li className="pl-4 text-l">PHP</li>
-              <li className="pl-4 text-l">HTML / CSS</li>
-              <li className="pl-4 text-l">React</li>
-              <li className="pl-4 text-l">AngularJS</li>
-              <li className="pl-4 text-l">Tailwind CSS</li>
-              <li className="pl-4 text-l">Bootstrap</li>
+              <li className="pl-3 text-l">Javascript</li>
+              <li className="pl-3 text-l">PHP</li>
+              <li className="pl-3 text-l">HTML / CSS</li>
+              <li className="pl-3 text-l">React</li>
+              <li className="pl-3 text-l">AngularJS</li>
+              <li className="pl-3 text-l">Tailwind CSS</li>
+              <li className="pl-3 text-l">Bootstrap</li>
             </ul>
           </div>
         </div>
@@ -45,11 +45,11 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">Git</li>
-              <li className="pl-4 text-l">Subversion (SVN)</li>
-              <li className="pl-4 text-l">Docker / Podman</li>
-              <li className="pl-4 text-l">GitLab CI/CD</li>
-              <li className="pl-4 text-l">Jira / Confluence</li>
+              <li className="pl-3 text-l">Git</li>
+              <li className="pl-3 text-l">Subversion (SVN)</li>
+              <li className="pl-3 text-l">Docker / Podman</li>
+              <li className="pl-3 text-l">GitLab CI/CD</li>
+              <li className="pl-3 text-l">Jira / Confluence</li>
             </ul>
           </div>
         </div>
@@ -58,12 +58,12 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">Xilinx Vivado</li>
-              <li className="pl-4 text-l">LabVIEW</li>
-              <li className="pl-4 text-l">Cadence Virtuoso</li>
-              <li className="pl-4 text-l">Altium</li>
-              <li className="pl-4 text-l">LaTeX</li>
-              <li className="pl-4 text-l">Unity / C#</li>
+              <li className="pl-3 text-l">Xilinx Vivado</li>
+              <li className="pl-3 text-l">LabVIEW</li>
+              <li className="pl-3 text-l">Cadence Virtuoso</li>
+              <li className="pl-3 text-l">Altium</li>
+              <li className="pl-3 text-l">LaTeX</li>
+              <li className="pl-3 text-l">Unity / C#</li>
             </ul>
           </div>
         </div>
@@ -72,9 +72,9 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">MongoDB</li>
-              <li className="pl-4 text-l">MySQL</li>
-              <li className="pl-4 text-l">SQLite</li>
+              <li className="pl-3 text-l">MongoDB</li>
+              <li className="pl-3 text-l">MySQL</li>
+              <li className="pl-3 text-l">SQLite</li>
             </ul>
           </div>
         </div>
@@ -83,8 +83,8 @@ function SkillsSection() {
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
             <ul className="list-disc list-inside">
-              <li className="pl-4 text-l">ZYBO Z7-10 FPGA</li>
-              <li className="pl-4 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="no-underline hover:underline cursor-pointer text-blue-300">ESP32 MCU</button></li>
+              <li className="pl-3 text-l">ZYBO Z7 FPGA</li>
+              <li className="pl-3 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="no-underline hover:underline cursor-pointer text-blue-300">ESP32 MCU</button></li>
             </ul>
           </div>
         </div>
