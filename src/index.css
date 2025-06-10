@@ -5,3 +5,13 @@
         cursor-pointer
         text-blue-600 dark:text-blue-300
 }
+
+.swiper-pagination-bullet {
+    @apply bg-black dark:bg-white
+}
+.swiper-button-prev {
+    @apply text-black dark:text-white
+}
+.swiper-button-next {
+    @apply text-black dark:text-white
+}

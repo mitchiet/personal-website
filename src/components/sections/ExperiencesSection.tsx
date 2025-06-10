@@ -1,5 +1,11 @@
 import { Heading } from '../tailwind-catalyst/heading'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import l3harrisLogo from '../../assets/logos/l3harris.svg';
 import l3harrisDarkLogo from '../../assets/logos/l3harris-dark.svg';
 
@@ -11,8 +17,18 @@ function ExperiencesSection() {
         <Heading>Experiences</Heading>
       </div>
       <br/>
-      <img className="dark:hidden" src={l3harrisLogo}></img>
-      <img className="hidden dark:block" src={l3harrisDarkLogo}></img>
+      <Swiper navigation pagination modules={[Navigation, Pagination]}>
+        <SwiperSlide>
+          <div className="flex items-center justify-center">
+            <img className="dark:hidden" src={l3harrisLogo}></img>
+            <img className="hidden dark:block" src={l3harrisDarkLogo}></img>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex items-center justify-center">
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   )
 }
