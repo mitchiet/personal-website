@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+.dialog-open-button {
+    @apply no-underline hover:underline active:underline
+        cursor-pointer
+        text-blue-600 dark:text-blue-300
+}
