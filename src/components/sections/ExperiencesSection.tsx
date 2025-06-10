@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 
 import l3harrisLogo from '../../assets/logos/l3harris.svg';
 import l3harrisDarkLogo from '../../assets/logos/l3harris-dark.svg';
+import minigripLogo from '../../assets/logos/minigrip.png';
 
 function ExperiencesSection() {
 
@@ -26,6 +27,7 @@ function ExperiencesSection() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center justify-center">
+            <img className="dark:bg-gray-400 dark:border-2 dark:text-white" src={minigripLogo}></img>
           </div>
         </SwiperSlide>
       </Swiper>

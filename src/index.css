@@ -6,6 +6,9 @@
         text-blue-600 dark:text-blue-300
 }
 
+.swiper-wrapper {
+    @apply items-center
+}
 .swiper-pagination-bullet {
     @apply bg-black dark:bg-white
 }
