@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .dialog-open-button {
     @apply no-underline hover:underline active:underline
         cursor-pointer
