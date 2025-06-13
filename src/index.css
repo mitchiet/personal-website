@@ -6,6 +6,7 @@ html {
     @apply text-zinc-950 dark:text-white
         lg:bg-white lg:ring-1 lg:ring-zinc-950/5 dark:lg:bg-zinc-900 dark:lg:ring-white/10
         bg-white ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10
+        !overflow-y-scroll !p-1
 }
 
 #main-nav {
