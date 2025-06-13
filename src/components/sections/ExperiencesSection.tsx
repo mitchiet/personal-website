@@ -20,14 +20,14 @@ function ExperiencesSection() {
       <br/>
       <Swiper navigation pagination modules={[Navigation, Pagination]}>
         <SwiperSlide>
-          <div className="flex items-center justify-center">
-            <img className="dark:hidden" src={l3harrisLogo}></img>
-            <img className="hidden dark:block" src={l3harrisDarkLogo}></img>
+          <div className="flex items-center justify-center my-10">
+            <img className="dark:hidden w-7/10" src={l3harrisLogo}></img>
+            <img className="hidden dark:block w-7/10" src={l3harrisDarkLogo}></img>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center justify-center">
-            <img className="dark:bg-gray-400 dark:border-2 dark:text-white" src={minigripLogo}></img>
+          <div className="flex items-center justify-center my-10">
+            <img className="dark:bg-gray-400 dark:border-2 dark:text-white w-7/10" src={minigripLogo}></img>
           </div>
         </SwiperSlide>
       </Swiper>
