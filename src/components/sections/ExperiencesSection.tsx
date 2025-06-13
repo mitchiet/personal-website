@@ -20,14 +20,34 @@ function ExperiencesSection() {
       <br/>
       <Swiper navigation pagination modules={[Navigation, Pagination]}>
         <SwiperSlide>
-          <div className="flex items-center justify-center my-10">
-            <img className="dark:hidden w-7/10" src={l3harrisLogo}></img>
-            <img className="hidden dark:block w-7/10" src={l3harrisDarkLogo}></img>
+          <div className="mb-10">
+            <div className="flex items-center justify-center">
+              <img className="dark:hidden w-7/10" src={l3harrisLogo}></img>
+              <img className="hidden dark:block w-7/10" src={l3harrisDarkLogo}></img>
+            </div>
+            <div className="mx-15">
+              <div className="flow-root">
+                <h1 className="float-left underline">L3Harris</h1>
+                <h1 className="float-right">2020 - Present</h1>
+              </div>
+              <h1 className="text-left italic">Greenville, Texas</h1>
+              <h1 className="text-left italic">Sr. Associate Software Engineer</h1>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center justify-center my-10">
-            <img className="dark:bg-gray-400 dark:border-2 w-7/10" src={minigripLogo}></img>
+          <div className="my-10">
+            <div className="flex items-center justify-center">
+              <img className="dark:bg-gray-400 dark:border-2 w-6/10" src={minigripLogo}></img>
+            </div>
+            <div className="mx-15 mt-10">
+              <div className="flow-root">
+                <h1 className="float-left underline">Minigrip</h1>
+                <h1 className="float-right">2019</h1>
+              </div>
+              <h1 className="text-left italic">Seguin, Texas</h1>
+              <h1 className="text-left italic">Technical Intern</h1>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
