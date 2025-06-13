@@ -62,12 +62,12 @@ function App() {
         <Sidebar />
       }
     >
-    <Headless.Field className="flex float-end items-center gap-2">
-      <Label className="dark:opacity-50">Light</Label>
-      <Switch checked={darkMode} onChange={toggleDarkMode} />
-      <Label className="opacity-50 dark:opacity-100">Dark</Label>
-    </Headless.Field>
-    <ExperienceSection />
+      <Headless.Field className="flex float-end items-center gap-2">
+        <Label className="dark:opacity-50">Light</Label>
+        <Switch checked={darkMode} onChange={toggleDarkMode} />
+        <Label className="opacity-50 dark:opacity-100">Dark</Label>
+      </Headless.Field>
+      <ExperienceSection />
       <br/><br/><br/><br/>
       <SkillsSection />
     </SidebarLayout>
