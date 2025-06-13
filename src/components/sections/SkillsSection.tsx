@@ -1,6 +1,8 @@
-import { Heading } from '../tailwind-catalyst/heading'
-import ESP32Dialog from '../dialogs/ESP32Dialog'
 import { useState } from 'react'
+
+import { Heading } from '../tailwind-catalyst/heading'
+
+import ESP32Dialog from '../dialogs/ESP32Dialog'
 
 function SkillsSection() {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)

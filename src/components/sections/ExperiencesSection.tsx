@@ -7,8 +7,8 @@ import "swiper/css/grid";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import l3harrisLogo from '../../assets/logos/l3harris.svg';
-import l3harrisDarkLogo from '../../assets/logos/l3harris-dark.svg';
+import L3HarrisLogo from '../../assets/logos/l3harris.svg?react';
+import L3HarrisDarkLogo from '../../assets/logos/l3harris-dark.svg?react';
 import minigripLogo from '../../assets/logos/minigrip.png';
 
 function ExperiencesSection() {
@@ -31,8 +31,8 @@ function ExperiencesSection() {
           modules={[Grid, Navigation, Pagination]}>
         <SwiperSlide>
           <div className="flex items-center justify-center">
-            <img className="dark:hidden w-7/10" src={l3harrisLogo}></img>
-            <img className="hidden dark:block w-7/10" src={l3harrisDarkLogo}></img>
+            <L3HarrisLogo className="dark:hidden w-7/10 h-64"/>
+            <L3HarrisDarkLogo className="hidden dark:block w-7/10 h-64"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
