@@ -4,6 +4,23 @@ import { Heading } from '../tailwind-catalyst/heading'
 
 import ESP32Dialog from '../dialogs/ESP32Dialog'
 
+import CPPIcon from '../../assets/logos/technologies/cpp3-svgrepo-com.svg?react';
+import CIcon from '../../assets/logos/technologies/c3-svgrepo-com.svg?react';
+import MATLABIcon from '../../assets/logos/technologies/matlab-svgrepo-com.svg?react';
+import PythonIcon from '../../assets/logos/technologies/python-svgrepo-com.svg?react';
+import JavaIcon from '../../assets/logos/technologies/java-svgrepo-com.svg?react';
+import VerilogIcon from '../../assets/logos/technologies/verilog-svgrepo-com.svg?react';
+
+import JavascriptIcon from '../../assets/logos/technologies/javascript-svgrepo-com.svg?react';
+import TypescriptIcon from '../../assets/logos/technologies/typescript-svgrepo-com.svg?react';
+import PHPIcon from '../../assets/logos/technologies/php3-svgrepo-com.svg?react';
+import ReactIcon from '../../assets/logos/technologies/reactjs-svgrepo-com.svg?react';
+import AngularJSIcon from '../../assets/logos/technologies/angular-icon-logo-svgrepo-com.svg?react';
+import HTMLIcon from '../../assets/logos/technologies/html-svgrepo-com.svg?react';
+import CSSIcon from '../../assets/logos/technologies/css-svgrepo-com.svg?react';
+import TailwindCSSIcon from '../../assets/logos/technologies/tailwind-svgrepo-com.svg?react';
+import BootstrapIcon from '../../assets/logos/technologies/bootstrap-svgrepo-com.svg?react';
+
 function SkillsSection() {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
@@ -16,35 +33,38 @@ function SkillsSection() {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Dev Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">C / C++</li>
-              <li className="pl-3 text-l">Python</li>
-              <li className="pl-3 text-l">MATLAB</li>
-              <li className="pl-3 text-l">Java</li>
-              <li className="pl-3 text-l">Verilog</li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <CPPIcon className="size-12 mx-auto my-2" />
+              <CIcon className="size-12 mx-auto my-2" />
+              <PythonIcon className="size-12 mx-auto my-2" />
+              <MATLABIcon className="size-12 mx-auto my-2" />
+              <JavaIcon className="size-12 mx-auto my-2" />
+              <VerilogIcon className="size-12 mx-auto my-2" />
+            </div>
           </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">Javascript</li>
-              <li className="pl-3 text-l">PHP</li>
-              <li className="pl-3 text-l">HTML / CSS</li>
-              <li className="pl-3 text-l">React</li>
-              <li className="pl-3 text-l">AngularJS</li>
-              <li className="pl-3 text-l">Tailwind CSS</li>
-              <li className="pl-3 text-l">Bootstrap</li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <JavascriptIcon className="size-12 mx-auto my-2" />
+              <TypescriptIcon className="size-12 mx-auto my-2" />
+              <PHPIcon className="size-12 mx-auto my-2" />
+              <ReactIcon className="size-12 mx-auto my-2" />
+              <AngularJSIcon className="size-12 mx-auto my-2" />
+              <HTMLIcon className="size-12 mx-auto my-2" />
+              <CSSIcon className="size-12 mx-auto my-2" />
+              <TailwindCSSIcon className="size-12 mx-auto my-2" />
+              <BootstrapIcon className="size-12 mx-auto my-2" />
+            </div>
           </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-3 text-l">Git</li>
@@ -57,7 +77,7 @@ function SkillsSection() {
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-3 text-l">Xilinx Vivado</li>
@@ -71,7 +91,7 @@ function SkillsSection() {
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-3 text-l">MongoDB</li>
@@ -82,7 +102,7 @@ function SkillsSection() {
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
-          <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
+          <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
             <ul className="list-disc list-inside">
               <li className="pl-3 text-l">ZYBO Z7 FPGA</li>
