@@ -13,7 +13,7 @@ html {
 }
 
 .swiper-wrapper {
-    @apply items-center
+    @apply items-center pb-10
 }
 .swiper-pagination-bullet {
     @apply bg-black dark:bg-white
