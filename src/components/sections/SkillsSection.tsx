@@ -13,7 +13,7 @@ function SkillsSection() {
       <br/>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Dev Tools</h1>
             <ul className="list-disc list-inside">
@@ -26,7 +26,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web Tools</h1>
             <ul className="list-disc list-inside">
@@ -41,7 +41,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
             <ul className="list-disc list-inside">
@@ -54,7 +54,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
             <ul className="list-disc list-inside">
@@ -68,7 +68,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
             <ul className="list-disc list-inside">
@@ -79,7 +79,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1 text-zinc-950 dark:text-white">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 mt-2 mb-5 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
             <ul className="list-disc list-inside">

@@ -27,7 +27,7 @@ function ExperiencesSection() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center justify-center my-10">
-            <img className="dark:bg-gray-400 dark:border-2 dark:text-white w-7/10" src={minigripLogo}></img>
+            <img className="dark:bg-gray-400 dark:border-2 w-7/10" src={minigripLogo}></img>
           </div>
         </SwiperSlide>
       </Swiper>

@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+    @apply text-zinc-950 dark:text-white
+}
+
 .dialog-open-button {
     @apply no-underline hover:underline active:underline
         cursor-pointer
