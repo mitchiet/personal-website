@@ -65,13 +65,13 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Dev Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <CPPIcon className="size-12 mx-auto my-2" />
-              <CIcon className="size-12 mx-auto my-2" />
-              <PythonIcon className="size-12 mx-auto my-2" />
-              <MATLABIcon className="size-12 mx-auto my-2" />
-              <JavaIcon className="size-12 mx-auto my-2" />
-              <VerilogIcon className="size-12 mx-auto my-2" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <CPPIcon className="tech-icon" />
+              <CIcon className="tech-icon" />
+              <PythonIcon className="tech-icon" />
+              <MATLABIcon className="tech-icon" />
+              <JavaIcon className="tech-icon" />
+              <VerilogIcon className="tech-icon" />
             </div>
           </div>
         </div>
@@ -79,16 +79,16 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <JavascriptIcon className="size-12 mx-auto my-2" />
-              <TypescriptIcon className="size-12 mx-auto my-2" />
-              <PHPIcon className="size-12 mx-auto my-2" />
-              <ReactIcon className="size-12 mx-auto my-2" />
-              <AngularJSIcon className="size-12 mx-auto my-2" />
-              <HTMLIcon className="size-12 mx-auto my-2" />
-              <CSSIcon className="size-12 mx-auto my-2" />
-              <TailwindCSSIcon className="size-12 mx-auto my-2" />
-              <BootstrapIcon className="size-12 mx-auto my-2" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <JavascriptIcon className="tech-icon" />
+              <TypescriptIcon className="tech-icon" />
+              <PHPIcon className="tech-icon" />
+              <ReactIcon className="tech-icon" />
+              <AngularJSIcon className="tech-icon" />
+              <HTMLIcon className="tech-icon" />
+              <CSSIcon className="tech-icon" />
+              <TailwindCSSIcon className="tech-icon" />
+              <BootstrapIcon className="tech-icon" />
             </div>
           </div>
         </div>
@@ -96,15 +96,15 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <GitIcon className="size-12 mx-auto my-2" />
-              <SVNIcon className="size-12 mx-auto my-2" />
-              <DockerIcon className="size-12 mx-auto my-2" />
-              <PodmanIcon className="size-12 mx-auto my-2" />
-              <GitlabIcon className="size-12 mx-auto my-2" />
-              <GithubIcon className="size-12 mx-auto my-2 dark:fill-white" />
-              <JiraIcon className="size-12 mx-auto my-2" />
-              <ConfluenceIcon className="size-12 mx-auto my-2" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <GitIcon className="tech-icon" />
+              <SVNIcon className="tech-icon" />
+              <DockerIcon className="tech-icon" />
+              <PodmanIcon className="tech-icon" />
+              <GitlabIcon className="tech-icon" />
+              <GithubIcon className="tech-icon dark:fill-white" />
+              <JiraIcon className="tech-icon" />
+              <ConfluenceIcon className="tech-icon" />
             </div>
           </div>
         </div>
@@ -112,14 +112,14 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <XilinxIcon className="size-12 mx-auto my-2" />
-              <LabVIEWIcon className="size-12 mx-auto my-2 dark:fill-white" />
-              <CadenceIcon className="size-12 mx-auto my-2 dark:hidden" />
-              <CadenceDarkIcon className="size-12 mx-auto my-2 hidden dark:block" />
-              <AltiumIcon className="size-12 mx-auto my-2 invert dark:filter-none" />
-              <LatexIcon className="size-12 mx-auto my-2" />
-              <UnityIcon className="size-12 mx-auto my-2 dark:fill-white" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <XilinxIcon className="tech-icon" />
+              <LabVIEWIcon className="tech-icon dark:fill-white" />
+              <CadenceIcon className="tech-icon dark:hidden" />
+              <CadenceDarkIcon className="tech-icon hidden dark:block" />
+              <AltiumIcon className="tech-icon invert dark:filter-none" />
+              <LatexIcon className="tech-icon" />
+              <UnityIcon className="tech-icon dark:fill-white" />
             </div>
           </div>
         </div>
@@ -127,10 +127,10 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <MongoDBIcon className="size-12 mx-auto my-2" />
-              <MySQLIcon className="size-12 mx-auto my-2" />
-              <SQLiteIcon className="size-12 mx-auto my-2" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <MongoDBIcon className="tech-icon" />
+              <MySQLIcon className="tech-icon" />
+              <SQLiteIcon className="tech-icon" />
             </div>
           </div>
         </div>
@@ -138,15 +138,15 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Arch / OS Tools</h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              <RedhatIcon className="size-12 mx-auto my-2" />
-              <RockyIcon className="size-12 mx-auto my-2" />
-              <CentosIcon className="size-12 mx-auto my-2" />
-              <WindowsIcon className="size-12 mx-auto my-2" />
-              <AppleIcon className="size-12 mx-auto my-2 dark:invert" />
-              <DigilentIcon className="size-12 mx-auto my-2" />
+            <div className="grid grid-cols-3 xl:grid-cols-4">
+              <RedhatIcon className="tech-icon" />
+              <RockyIcon className="tech-icon" />
+              <CentosIcon className="tech-icon" />
+              <WindowsIcon className="tech-icon" />
+              <AppleIcon className="tech-icon dark:invert" />
+              <DigilentIcon className="tech-icon" />
               <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">
-                <EspressifIcon className="size-12 mx-auto my-2" />
+                <EspressifIcon className="tech-icon" />
               </button>
             </div>
           </div>

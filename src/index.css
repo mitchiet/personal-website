@@ -37,3 +37,8 @@ svg {
 .swiper-button-next {
     @apply text-black dark:text-white
 }
+
+
+.tech-icon {
+    @apply size-12 mx-auto my-2 md:size-14
+}
