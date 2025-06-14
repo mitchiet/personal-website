@@ -11,7 +11,7 @@ import { Bars3Icon } from '@heroicons/react/24/solid'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 
 import TechnologiesSection from "./components/sections/TechnologiesSection"
-import ExperienceSection from './components/sections/ExperiencesSection'
+import EmploymentSection from './components/sections/EmploymentSection'
 
 function App() {
 
@@ -108,7 +108,7 @@ function App() {
         <main className="flex flex-1 flex-col pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
           <div className="grow p-6 lg:p-10">
             <div className="mx-auto max-w-6xl">
-              <ExperienceSection />
+              <EmploymentSection />
               <br/><br/><br/><br/>
               <TechnologiesSection />
             </div>
