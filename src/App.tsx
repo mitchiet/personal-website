@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 
 import { Button } from './components/tailwind-catalyst/button'
 import { Label } from './components/tailwind-catalyst/fieldset'
-import { Navbar, NavbarItem, NavbarSpacer } from './components/tailwind-catalyst/navbar'
+import { Navbar, NavbarSpacer } from './components/tailwind-catalyst/navbar'
 import { Sidebar } from './components/tailwind-catalyst/sidebar'
 import { Switch } from './components/tailwind-catalyst/switch'
 import * as Headless from '@headlessui/react'
