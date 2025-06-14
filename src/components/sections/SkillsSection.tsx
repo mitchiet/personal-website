@@ -43,6 +43,9 @@ import MongoDBIcon from '../../assets/logos/technologies/mongodb-svgrepo-com.svg
 import MySQLIcon from '../../assets/logos/technologies/oracle-mysql.svg?react';
 import SQLiteIcon from '../../assets/logos/technologies/sqlite-svgrepo-com.svg?react';
 
+import DigilentIcon from '../../assets/logos/technologies/digilent.svg?react';
+import EspressifIcon from '../../assets/logos/technologies/espressif-svgrepo-com.svg?react';
+
 function SkillsSection() {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
@@ -130,16 +133,18 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">ZYBO Z7 FPGA</li>
-              <li className="pl-3 text-l"><button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">ESP32 MCU</button></li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <DigilentIcon className="size-12 mx-auto my-2" />
+              <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">
+                <EspressifIcon className="size-12 mx-auto my-2" />
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <ESP32Dialog isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
+      <ESP32Dialog className="mt-16" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
     </div>
   )
 }
