@@ -72,13 +72,13 @@ function App() {
 
       {/* Navbar section */}
       <Navbar id="main-nav" className="fixed top-0 left-0 right-0 z-100 opacity-100 border-double border-b-4">
-        <Button plain className="lg:hidden ml-3" onClick={() => setShowSidebar(true)}>
+        <Button plain className="cursor-pointer lg:hidden ml-3" onClick={() => setShowSidebar(true)}>
           <Bars3Icon />
         </Button>
         <NavbarSpacer />
         <Headless.Field className="flex float-end items-center gap-2 mr-3 p-3">
           <Label className="dark:opacity-50">Light</Label>
-          <Switch checked={darkMode} onChange={toggleDarkMode} />
+          <Switch className="cursor-pointer" checked={darkMode} onChange={toggleDarkMode} />
           <Label className="opacity-50 dark:opacity-100">Dark</Label>
         </Headless.Field>
       </Navbar>
@@ -89,11 +89,11 @@ function App() {
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
             <div className="p-4 mt-4">
-              <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
+              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                 Employment
                 <BriefcaseIcon />
               </Button>
-              <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
+              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
                 Technologies
                 <CpuChipIcon />
               </Button>
@@ -113,16 +113,16 @@ function App() {
           >
             <div className="flex h-full flex-col rounded-lg bg-white shadow-xs ring-1 ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10">
               <div className="mb-3 px-4 pt-3">
-                <Headless.CloseButton as={NavbarItem} aria-label="Close navigation" className="float-end">
+                <Button plain className="float-end cursor-pointer" onClick={() => setShowSidebar(false)}>
                   <ArrowLeftIcon />
-                </Headless.CloseButton>
+                </Button>
               </div>
               <div className="p-4">
-                <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                   Employment
                   <BriefcaseIcon />
                 </Button>
-                <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
                   Technologies
                   <CpuChipIcon />
                 </Button>
