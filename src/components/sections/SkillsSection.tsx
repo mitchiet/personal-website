@@ -43,6 +43,11 @@ import MongoDBIcon from '../../assets/logos/technologies/mongodb-svgrepo-com.svg
 import MySQLIcon from '../../assets/logos/technologies/oracle-mysql.svg?react';
 import SQLiteIcon from '../../assets/logos/technologies/sqlite-svgrepo-com.svg?react';
 
+import RedhatIcon from '../../assets/logos/technologies/redhat-svgrepo-com.svg?react';
+import RockyIcon from '../../assets/logos/technologies/rocky.svg?react';
+import CentosIcon from '../../assets/logos/technologies/centos-icon-svgrepo-com.svg?react';
+import WindowsIcon from '../../assets/logos/technologies/windows.svg?react';
+import AppleIcon from '../../assets/logos/technologies/apple-173-svgrepo-com.svg?react';
 import DigilentIcon from '../../assets/logos/technologies/digilent.svg?react';
 import EspressifIcon from '../../assets/logos/technologies/espressif-svgrepo-com.svg?react';
 
@@ -132,8 +137,13 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Hardware Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Arch / OS Tools</h1>
             <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <RedhatIcon className="size-12 mx-auto my-2" />
+              <RockyIcon className="size-12 mx-auto my-2" />
+              <CentosIcon className="size-12 mx-auto my-2" />
+              <WindowsIcon className="size-12 mx-auto my-2" />
+              <AppleIcon className="size-12 mx-auto my-2 dark:invert" />
               <DigilentIcon className="size-12 mx-auto my-2" />
               <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">
                 <EspressifIcon className="size-12 mx-auto my-2" />
