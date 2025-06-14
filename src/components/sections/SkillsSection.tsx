@@ -21,6 +21,28 @@ import CSSIcon from '../../assets/logos/technologies/css-svgrepo-com.svg?react';
 import TailwindCSSIcon from '../../assets/logos/technologies/tailwind-svgrepo-com.svg?react';
 import BootstrapIcon from '../../assets/logos/technologies/bootstrap-svgrepo-com.svg?react';
 
+import GitIcon from '../../assets/logos/technologies/git-svgrepo-com.svg?react';
+import SVNIcon from '../../assets/logos/technologies/subversion-svgrepo-com.svg?react';
+import DockerIcon from '../../assets/logos/technologies/docker-svgrepo-com.svg?react';
+import PodmanIcon from '../../assets/logos/technologies/podmanio-icon.svg?react';
+import GitlabIcon from '../../assets/logos/technologies/gitlab-svgrepo-com.svg?react';
+import GithubIcon from '../../assets/logos/technologies/github-svgrepo-com.svg?react';
+
+import JiraIcon from '../../assets/logos/technologies/jira-svgrepo-com.svg?react';
+import ConfluenceIcon from '../../assets/logos/technologies/confluence-svgrepo-com.svg?react';
+
+import XilinxIcon from '../../assets/logos/technologies/xilinx.svg?react';
+import LabVIEWIcon from '../../assets/logos/technologies/labview-svgrepo-com.svg?react';
+import CadenceIcon from '../../assets/logos/technologies/cadence.svg?react';
+import CadenceDarkIcon from '../../assets/logos/technologies/cadence-dark.svg?react';
+import AltiumIcon from '../../assets/logos/technologies/altium.svg?react';
+import LatexIcon from '../../assets/logos/technologies/latex.svg?react';
+import UnityIcon from '../../assets/logos/technologies/unity-svgrepo-com.svg?react';
+
+import MongoDBIcon from '../../assets/logos/technologies/mongodb-svgrepo-com.svg?react';
+import MySQLIcon from '../../assets/logos/technologies/oracle-mysql.svg?react';
+import SQLiteIcon from '../../assets/logos/technologies/sqlite-svgrepo-com.svg?react';
+
 function SkillsSection() {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
@@ -66,38 +88,42 @@ function SkillsSection() {
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">Git</li>
-              <li className="pl-3 text-l">Subversion (SVN)</li>
-              <li className="pl-3 text-l">Docker / Podman</li>
-              <li className="pl-3 text-l">GitLab CI/CD</li>
-              <li className="pl-3 text-l">Jira / Confluence</li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <GitIcon className="size-12 mx-auto my-2" />
+              <SVNIcon className="size-12 mx-auto my-2" />
+              <DockerIcon className="size-12 mx-auto my-2" />
+              <PodmanIcon className="size-12 mx-auto my-2" />
+              <GitlabIcon className="size-12 mx-auto my-2" />
+              <GithubIcon className="size-12 mx-auto my-2 dark:fill-white" />
+              <JiraIcon className="size-12 mx-auto my-2" />
+              <ConfluenceIcon className="size-12 mx-auto my-2" />
+            </div>
           </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">Xilinx Vivado</li>
-              <li className="pl-3 text-l">LabVIEW</li>
-              <li className="pl-3 text-l">Cadence Virtuoso</li>
-              <li className="pl-3 text-l">Altium</li>
-              <li className="pl-3 text-l">LaTeX</li>
-              <li className="pl-3 text-l">Unity / C#</li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <XilinxIcon className="size-12 mx-auto my-2" />
+              <LabVIEWIcon className="size-12 mx-auto my-2 dark:fill-white" />
+              <CadenceIcon className="size-12 mx-auto my-2 dark:hidden" />
+              <CadenceDarkIcon className="size-12 mx-auto my-2 hidden dark:block" />
+              <AltiumIcon className="size-12 mx-auto my-2 invert dark:filter-none" />
+              <LatexIcon className="size-12 mx-auto my-2" />
+              <UnityIcon className="size-12 mx-auto my-2 dark:fill-white" />
+            </div>
           </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
-            <ul className="list-disc list-inside">
-              <li className="pl-3 text-l">MongoDB</li>
-              <li className="pl-3 text-l">MySQL</li>
-              <li className="pl-3 text-l">SQLite</li>
-            </ul>
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+              <MongoDBIcon className="size-12 mx-auto my-2" />
+              <MySQLIcon className="size-12 mx-auto my-2" />
+              <SQLiteIcon className="size-12 mx-auto my-2" />
+            </div>
           </div>
         </div>
 
