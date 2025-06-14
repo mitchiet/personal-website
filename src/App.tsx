@@ -10,7 +10,7 @@ import * as Headless from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 
-import SkillsSection from "./components/sections/SkillsSection"
+import TechnologiesSection from "./components/sections/TechnologiesSection"
 import ExperienceSection from './components/sections/ExperiencesSection'
 
 function App() {
@@ -110,7 +110,7 @@ function App() {
             <div className="mx-auto max-w-6xl">
               <ExperienceSection />
               <br/><br/><br/><br/>
-              <SkillsSection />
+              <TechnologiesSection />
             </div>
           </div>
         </main>

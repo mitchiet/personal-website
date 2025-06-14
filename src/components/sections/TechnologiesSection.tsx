@@ -51,7 +51,7 @@ import AppleIcon from '../../assets/logos/technologies/apple-173-svgrepo-com.svg
 import DigilentIcon from '../../assets/logos/technologies/digilent.svg?react';
 import EspressifIcon from '../../assets/logos/technologies/espressif-svgrepo-com.svg?react';
 
-function SkillsSection() {
+function TechnologiesSection() {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
   return (
@@ -159,4 +159,4 @@ function SkillsSection() {
   )
 }
 
-export default SkillsSection
+export default TechnologiesSection
