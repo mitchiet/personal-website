@@ -19,7 +19,7 @@ function ExperiencesSection() {
         <Heading>Experiences</Heading>
       </div>
       <br/>
-      <Swiper slidesPerView={1}
+      <Swiper className="relative" slidesPerView={1}
           grid={{
             rows: 2,
             fill: "row"
