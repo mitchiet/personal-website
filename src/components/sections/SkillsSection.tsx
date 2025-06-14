@@ -57,14 +57,14 @@ function SkillsSection() {
   return (
     <div>
       <div className="flex w-full items-end justify-between gap-4 border-b-2 border-zinc-950/10 pb-4 dark:border-white/10">
-        <Heading>Skills</Heading>
+        <Heading>Technologies</Heading>
       </div>
       <br/>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Dev Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Development</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <CPPIcon className="tech-icon" />
               <CIcon className="tech-icon" />
@@ -78,7 +78,7 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Web Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Web</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <JavascriptIcon className="tech-icon" />
               <TypescriptIcon className="tech-icon" />
@@ -95,7 +95,7 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Workflow Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Workflow</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <GitIcon className="tech-icon" />
               <SVNIcon className="tech-icon" />
@@ -111,7 +111,7 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Design Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Design</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <XilinxIcon className="tech-icon" />
               <LabVIEWIcon className="tech-icon dark:fill-white" />
@@ -126,7 +126,7 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Database Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Database</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <MongoDBIcon className="tech-icon" />
               <MySQLIcon className="tech-icon" />
@@ -137,7 +137,7 @@ function SkillsSection() {
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
-            <h1 className="text-xl mb-1 ml-2">Arch / OS Tools</h1>
+            <h1 className="text-xl mb-1 ml-2">Arch / OS</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
               <RedhatIcon className="tech-icon" />
               <RockyIcon className="tech-icon" />
@@ -154,7 +154,7 @@ function SkillsSection() {
 
       </div>
 
-      <ESP32Dialog className="mt-16" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
+      <ESP32Dialog className="fixed inset-x-0 mx-auto top-24" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
     </div>
   )
 }
