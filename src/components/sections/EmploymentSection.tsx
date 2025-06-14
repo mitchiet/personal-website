@@ -11,10 +11,15 @@ import L3HarrisLogo from '../../assets/logos/l3harris.svg?react';
 import L3HarrisDarkLogo from '../../assets/logos/l3harris-dark.svg?react';
 import minigripLogo from '../../assets/logos/minigrip.png';
 
-function EmploymentSection() {
+
+interface EmploymentSectionProps {
+    ref?: React.Ref<HTMLDivElement>;
+}
+
+function EmploymentSection({ ref }: EmploymentSectionProps) {
 
   return (
-    <div>
+    <div ref={ref}>
       <div className="flex w-full items-end justify-between gap-4 border-b-2 border-zinc-950/10 pb-4 dark:border-white/10">
         <Heading>Employment</Heading>
       </div>

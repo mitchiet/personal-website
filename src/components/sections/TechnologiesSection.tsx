@@ -51,11 +51,15 @@ import AppleIcon from '../../assets/logos/technologies/apple-173-svgrepo-com.svg
 import DigilentIcon from '../../assets/logos/technologies/digilent.svg?react';
 import EspressifIcon from '../../assets/logos/technologies/espressif-svgrepo-com.svg?react';
 
-function TechnologiesSection() {
+interface TechnologiesSectionProps {
+    ref?: React.Ref<HTMLDivElement>;
+}
+
+function TechnologiesSection({ ref }: TechnologiesSectionProps) {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
   return (
-    <div>
+    <div ref={ref}>
       <div className="flex w-full items-end justify-between gap-4 border-b-2 border-zinc-950/10 pb-4 dark:border-white/10">
         <Heading>Technologies</Heading>
       </div>

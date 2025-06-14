@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 
 import { Button } from './components/tailwind-catalyst/button'
 import { Label } from './components/tailwind-catalyst/fieldset'
@@ -7,8 +7,10 @@ import { Sidebar } from './components/tailwind-catalyst/sidebar'
 import { Switch } from './components/tailwind-catalyst/switch'
 import * as Headless from '@headlessui/react'
 
-import { Bars3Icon } from '@heroicons/react/24/solid'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon } from '@heroicons/react/24/solid'
+import { BriefcaseIcon } from '@heroicons/react/24/solid'
+import { CpuChipIcon } from '@heroicons/react/24/solid'
 
 import TechnologiesSection from "./components/sections/TechnologiesSection"
 import EmploymentSection from './components/sections/EmploymentSection'
@@ -16,6 +18,13 @@ import EmploymentSection from './components/sections/EmploymentSection'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+
+  const employmentSectionRef = useRef<HTMLDivElement | null>(null)
+  const technologiesSectionRef = useRef<HTMLDivElement | null>(null)
+
+  const scrollToElementRef = (elementRef:React.RefObject<HTMLElement | null>) => {
+    elementRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useLayoutEffect(() => {
 
@@ -79,7 +88,16 @@ function App() {
         {/* Desktop Sidebar */}
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
-            {/* {children} */}
+            <div className="p-4 mt-4">
+              <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
+                Employment
+                <BriefcaseIcon />
+              </Button>
+              <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
+                Technologies
+                <CpuChipIcon />
+              </Button>
+            </div>
           </Sidebar>
         </div>
         
@@ -94,12 +112,21 @@ function App() {
             className="fixed z-100 inset-y-0 w-full max-w-80 p-2 transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
             <div className="flex h-full flex-col rounded-lg bg-white shadow-xs ring-1 ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10">
-              <div className="-mb-3 px-4 pt-3">
+              <div className="mb-3 px-4 pt-3">
                 <Headless.CloseButton as={NavbarItem} aria-label="Close navigation" className="float-end">
                   <ArrowLeftIcon />
                 </Headless.CloseButton>
               </div>
-              {/* {children} */}
+              <div className="p-4">
+                <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
+                  Employment
+                  <BriefcaseIcon />
+                </Button>
+                <Button plain className="w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
+                  Technologies
+                  <CpuChipIcon />
+                </Button>
+              </div>
             </div>
           </Headless.DialogPanel>
         </Headless.Dialog>
@@ -108,9 +135,10 @@ function App() {
         <main className="flex flex-1 flex-col pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
           <div className="grow p-6 lg:p-10">
             <div className="mx-auto max-w-6xl">
-              <EmploymentSection />
+              <EmploymentSection ref={employmentSectionRef} />
               <br/><br/><br/><br/>
-              <TechnologiesSection />
+              <TechnologiesSection ref={technologiesSectionRef} />
+              <br/>
             </div>
           </div>
         </main>
