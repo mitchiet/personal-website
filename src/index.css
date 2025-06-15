@@ -41,17 +41,17 @@ svg {
 
 
 .tech-icon {
-    @apply size-12 md:size-14
+    @apply size-12 md:size-14 pb-2
 }
 .tech-icon-container {
     @apply mx-auto my-3
 }
 .tech-more-info {
     @apply border-double border-b-0
-    shadow-[0_8px_6px_-6px_#000000]
-    dark:shadow-[0_8px_6px_-6px_#FFFFFF]
-    hover:shadow-[0_8px_6px_-6px_#3355FF]
-    active:shadow-[0_8px_6px_-6px_#3355FF]
-    dark:hover:shadow-[0_8px_6px_-6px_#33AAFF]
-    dark:active:shadow-[0_8px_6px_-6px_#33AAFF]
+    shadow-[0_8px_5px_-6px_#000000]
+    dark:shadow-[0_8px_5px_-6px_#FFFFFF]
+    hover:shadow-[0_8px_5px_-6px_#3355FF]
+    active:shadow-[0_8px_5px_-6px_#3355FF]
+    dark:hover:shadow-[0_8px_5px_-6px_#33AAFF]
+    dark:active:shadow-[0_8px_5px_-6px_#33AAFF]
 }
