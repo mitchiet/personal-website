@@ -7,18 +7,21 @@ import { Sidebar } from './components/tailwind-catalyst/sidebar'
 import { Switch } from './components/tailwind-catalyst/switch'
 import * as Headless from '@headlessui/react'
 
+import { AcademicCapIcon } from '@heroicons/react/24/solid'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { BriefcaseIcon } from '@heroicons/react/24/solid'
 import { CpuChipIcon } from '@heroicons/react/24/solid'
 
-import TechnologiesSection from "./components/sections/TechnologiesSection"
+import EducationSection from "./components/sections/EducationSection"
 import EmploymentSection from './components/sections/EmploymentSection'
+import TechnologiesSection from "./components/sections/TechnologiesSection"
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  const educationSectionRef = useRef<HTMLDivElement | null>(null)
   const employmentSectionRef = useRef<HTMLDivElement | null>(null)
   const technologiesSectionRef = useRef<HTMLDivElement | null>(null)
 
@@ -89,6 +92,10 @@ function App() {
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
             <div className="p-4 mt-4">
+              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
+                Education
+                <AcademicCapIcon />
+              </Button>
               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                 Employment
                 <BriefcaseIcon />
@@ -118,6 +125,10 @@ function App() {
                 </Button>
               </div>
               <div className="p-4">
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
+                Education
+                <AcademicCapIcon />
+              </Button>
                 <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                   Employment
                   <BriefcaseIcon />
@@ -135,6 +146,8 @@ function App() {
         <main className="flex flex-1 flex-col pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
           <div className="grow p-6 lg:p-10">
             <div className="mx-auto max-w-6xl">
+              <EducationSection ref={educationSectionRef} />
+              <br/><br/><br/><br/>
               <EmploymentSection ref={employmentSectionRef} />
               <br/><br/><br/><br/>
               <TechnologiesSection ref={technologiesSectionRef} />
