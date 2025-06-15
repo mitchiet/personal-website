@@ -13,11 +13,29 @@ function ESP32Dialog(props:any) {
         <Button plain className="float-start mr-2" onClick={() => props.isOpenSetter(false)}>
           <XMarkIcon />
         </Button>
-        <span className="inline-block align-middle">ESP32 MCU</span>
+        <span className="inline-block align-middle">Espressif ESP32 Microcontroller</span>
       </DialogTitle>
       <DialogBody>
         <Field>
-          <img src={pic}></img>
+          <p>
+            My senior design project was to design an automated smoker system.
+            The system consisted of a control unit, three thermocouples, a blow fan, and two motors
+            (for fuel intake and vent control). The microcontroller was programmed to control internal temperatures
+            based on a PID algorithm. Additionally, an app was created that allowed for Bluetooth control.
+            My portion of the work was to design the PCB and program the microcontroller unit. 
+          </p>
+        </Field>
+        <br/>
+        <Field>
+          <img className="rounded-xl border-2" src={pic}></img>
+        </Field>
+        <br/>
+        <Field>
+          <p>
+            It was a very fun project to work on,
+            but in the end, I would recommend a <a className="link" href="https://www.traeger.com">Traeger</a> grill designed
+            by a professional team with more time and budget😆.
+          </p>
         </Field>
       </DialogBody>
     </Dialog>

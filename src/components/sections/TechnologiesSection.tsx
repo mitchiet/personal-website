@@ -152,7 +152,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><AppleIcon className="tech-icon dark:invert" /></div>
               <div className="tech-icon-container"><DigilentIcon className="tech-icon" /></div>
               <div className="tech-icon-container">
-                <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button tech-more-info">
+                <button onClick={() => setIsESP32DialogOpen(true)} className="tech-more-info">
                   <EspressifIcon className="tech-icon" />
                 </button>
               </div>
@@ -162,7 +162,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
 
       </div>
 
-      <ESP32Dialog className="fixed inset-x-0 mx-auto top-24" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
+      <ESP32Dialog className="inset-x-0 mx-auto mt-24 top-24" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen}></ESP32Dialog>
     </div>
   )
 }

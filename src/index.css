@@ -20,7 +20,7 @@ svg {
         bg-white ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10
 }
 
-.dialog-open-button {
+.link {
     @apply no-underline hover:underline active:underline
         cursor-pointer
         text-blue-600 dark:text-blue-300
@@ -47,11 +47,12 @@ svg {
     @apply mx-auto my-3
 }
 .tech-more-info {
-    @apply border-double border-b-0
-    shadow-[0_8px_5px_-6px_#000000]
-    dark:shadow-[0_8px_5px_-6px_#FFFFFF]
-    hover:shadow-[0_8px_5px_-6px_#3355FF]
-    active:shadow-[0_8px_5px_-6px_#3355FF]
-    dark:hover:shadow-[0_8px_5px_-6px_#33AAFF]
-    dark:active:shadow-[0_8px_5px_-6px_#33AAFF]
+    @apply cursor-pointer
+    border-double border-b-0
+    shadow-[0_8px_5px_-6px_theme(colors.black)]
+    dark:shadow-[0_8px_5px_-6px_theme(colors.white)]
+    hover:shadow-[0_8px_5px_-6px_theme(colors.blue.600)]
+    active:shadow-[0_8px_5px_-6px_theme(colors.blue.600)]
+    dark:hover:shadow-[0_8px_5px_-6px_theme(colors.blue.300)]
+    dark:active:shadow-[0_8px_5px_-6px_theme(colors.blue.300)]
 }
