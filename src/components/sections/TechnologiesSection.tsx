@@ -70,12 +70,12 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Development</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <CPPIcon className="tech-icon" />
-              <CIcon className="tech-icon" />
-              <PythonIcon className="tech-icon" />
-              <MATLABIcon className="tech-icon" />
-              <JavaIcon className="tech-icon" />
-              <VerilogIcon className="tech-icon" />
+              <div className="tech-icon-container"><CPPIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><CIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><PythonIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><MATLABIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><JavaIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><VerilogIcon className="tech-icon" /></div>
             </div>
           </div>
         </div>
@@ -84,15 +84,15 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <JavascriptIcon className="tech-icon" />
-              <TypescriptIcon className="tech-icon" />
-              <PHPIcon className="tech-icon" />
-              <ReactIcon className="tech-icon" />
-              <AngularJSIcon className="tech-icon" />
-              <HTMLIcon className="tech-icon" />
-              <CSSIcon className="tech-icon" />
-              <TailwindCSSIcon className="tech-icon" />
-              <BootstrapIcon className="tech-icon" />
+              <div className="tech-icon-container"><JavascriptIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><TypescriptIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><PHPIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><ReactIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><AngularJSIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><HTMLIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><CSSIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><TailwindCSSIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><BootstrapIcon className="tech-icon" /></div>
             </div>
           </div>
         </div>
@@ -101,14 +101,14 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <GitIcon className="tech-icon" />
-              <SVNIcon className="tech-icon" />
-              <DockerIcon className="tech-icon" />
-              <PodmanIcon className="tech-icon" />
-              <GitlabIcon className="tech-icon" />
-              <GithubIcon className="tech-icon dark:fill-white" />
-              <JiraIcon className="tech-icon" />
-              <ConfluenceIcon className="tech-icon" />
+              <div className="tech-icon-container"><GitIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><SVNIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><DockerIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><PodmanIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><GitlabIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><GithubIcon className="tech-icon dark:fill-white" /></div>
+              <div className="tech-icon-container"><JiraIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><ConfluenceIcon className="tech-icon" /></div>
             </div>
           </div>
         </div>
@@ -117,13 +117,15 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <XilinxIcon className="tech-icon" />
-              <LabVIEWIcon className="tech-icon dark:fill-white" />
-              <CadenceIcon className="tech-icon dark:hidden" />
-              <CadenceDarkIcon className="tech-icon hidden dark:block" />
-              <AltiumIcon className="tech-icon invert dark:filter-none" />
-              <LatexIcon className="tech-icon" />
-              <UnityIcon className="tech-icon dark:fill-white" />
+              <div className="tech-icon-container"><XilinxIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><LabVIEWIcon className="tech-icon dark:fill-white" /></div>
+              <div className="tech-icon-container">
+                <CadenceIcon className="tech-icon dark:hidden" />
+                <CadenceDarkIcon className="tech-icon hidden dark:block" />
+              </div>
+              <div className="tech-icon-container"><AltiumIcon className="tech-icon invert dark:filter-none" /></div>
+              <div className="tech-icon-container"><LatexIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><UnityIcon className="tech-icon dark:fill-white" /></div>
             </div>
           </div>
         </div>
@@ -132,9 +134,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <MongoDBIcon className="tech-icon" />
-              <MySQLIcon className="tech-icon" />
-              <SQLiteIcon className="tech-icon" />
+               <div className="tech-icon-container"><MongoDBIcon className="tech-icon" /></div>
+               <div className="tech-icon-container"><MySQLIcon className="tech-icon" /></div>
+               <div className="tech-icon-container"><SQLiteIcon className="tech-icon" /></div>
             </div>
           </div>
         </div>
@@ -143,15 +145,17 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Arch / OS</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
-              <RedhatIcon className="tech-icon" />
-              <RockyIcon className="tech-icon" />
-              <CentosIcon className="tech-icon" />
-              <WindowsIcon className="tech-icon" />
-              <AppleIcon className="tech-icon dark:invert" />
-              <DigilentIcon className="tech-icon" />
-              <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">
-                <EspressifIcon className="tech-icon" />
-              </button>
+              <div className="tech-icon-container"><RedhatIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><RockyIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><CentosIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><WindowsIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><AppleIcon className="tech-icon dark:invert" /></div>
+              <div className="tech-icon-container"><DigilentIcon className="tech-icon" /></div>
+              <div className="tech-icon-container tech-more-info">
+                <button onClick={() => setIsESP32DialogOpen(true)} className="dialog-open-button">
+                  <EspressifIcon className="tech-icon" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
