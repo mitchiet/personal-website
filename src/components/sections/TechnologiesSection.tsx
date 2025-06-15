@@ -40,7 +40,7 @@ import LatexIcon from '../../assets/logos/technologies/latex.svg?react';
 import UnityIcon from '../../assets/logos/technologies/unity-svgrepo-com.svg?react';
 
 import MongoDBIcon from '../../assets/logos/technologies/mongodb-svgrepo-com.svg?react';
-import MySQLIcon from '../../assets/logos/technologies/oracle-mysql.svg?react';
+import MySQLIcon from '../../assets/logos/technologies/mysql-official.svg?react';
 import SQLiteIcon from '../../assets/logos/technologies/sqlite-svgrepo-com.svg?react';
 
 import RedhatIcon from '../../assets/logos/technologies/redhat-svgrepo-com.svg?react';
