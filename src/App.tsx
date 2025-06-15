@@ -12,10 +12,12 @@ import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { BriefcaseIcon } from '@heroicons/react/24/solid'
 import { CpuChipIcon } from '@heroicons/react/24/solid'
+import { GlobeAltIcon } from '@heroicons/react/24/solid'
 
-import EducationSection from "./components/sections/EducationSection"
 import EmploymentSection from './components/sections/EmploymentSection'
+import EducationSection from "./components/sections/EducationSection"
 import TechnologiesSection from "./components/sections/TechnologiesSection"
+import ProfilesSection from './components/sections/ProfilesSection'
 
 function App() {
 
@@ -24,6 +26,7 @@ function App() {
   const educationSectionRef = useRef<HTMLDivElement | null>(null)
   const employmentSectionRef = useRef<HTMLDivElement | null>(null)
   const technologiesSectionRef = useRef<HTMLDivElement | null>(null)
+  const profilesSectionRef = useRef<HTMLDivElement | null>(null)
 
   const scrollToElementRef = (elementRef:React.RefObject<HTMLElement | null>) => {
     elementRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -104,6 +107,10 @@ function App() {
                 Technologies
                 <CpuChipIcon />
               </Button>
+              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(profilesSectionRef)}>
+                Profiles
+                <GlobeAltIcon />
+              </Button>
             </div>
           </Sidebar>
         </div>
@@ -137,6 +144,10 @@ function App() {
                   Technologies
                   <CpuChipIcon />
                 </Button>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(profilesSectionRef)}>
+                  Profiles
+                  <GlobeAltIcon />
+                </Button>
               </div>
             </div>
           </Headless.DialogPanel>
@@ -151,6 +162,8 @@ function App() {
               <EducationSection ref={educationSectionRef} />
               <br/><br/><br/><br/>
               <TechnologiesSection ref={technologiesSectionRef} />
+              <br/><br/><br/><br/>
+              <ProfilesSection ref={profilesSectionRef} />
               <br/>
             </div>
           </div>
