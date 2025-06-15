@@ -92,13 +92,13 @@ function App() {
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
             <div className="p-4 mt-4">
-              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
-                Education
-                <AcademicCapIcon />
-              </Button>
               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                 Employment
                 <BriefcaseIcon />
+              </Button>
+              <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
+                Education
+                <AcademicCapIcon />
               </Button>
               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
                 Technologies
@@ -125,13 +125,13 @@ function App() {
                 </Button>
               </div>
               <div className="p-4">
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
-                Education
-                <AcademicCapIcon />
-              </Button>
                 <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                   Employment
                   <BriefcaseIcon />
+                </Button>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
+                  Education
+                  <AcademicCapIcon />
                 </Button>
                 <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
                   Technologies
@@ -146,9 +146,9 @@ function App() {
         <main className="flex flex-1 flex-col pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
           <div className="grow p-6 lg:p-10">
             <div className="mx-auto max-w-6xl">
-              <EducationSection ref={educationSectionRef} />
-              <br/><br/><br/><br/>
               <EmploymentSection ref={employmentSectionRef} />
+              <br/><br/><br/><br/>
+              <EducationSection ref={educationSectionRef} />
               <br/><br/><br/><br/>
               <TechnologiesSection ref={technologiesSectionRef} />
               <br/>
