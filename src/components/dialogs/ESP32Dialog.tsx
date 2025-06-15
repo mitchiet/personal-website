@@ -10,7 +10,7 @@ function ESP32Dialog(props:any) {
   return (
     <Dialog open={props.isOpen} onClose={props.isOpenSetter} className={props.className}>
       <DialogTitle className="inline-flex items-center">
-        <Button plain className="float-start mr-2" onClick={() => props.isOpenSetter(false)}>
+        <Button plain className="float-start mr-2 cursor-pointer" onClick={() => props.isOpenSetter(false)}>
           <XMarkIcon />
         </Button>
         <span className="inline-block align-middle">Espressif ESP32 Microcontroller</span>
