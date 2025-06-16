@@ -43,7 +43,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center justify-center">
-            <img className="dark:bg-gray-400 dark:border-2 w-3/5" src={minigripLogo}></img>
+            <img className="dark:bg-white rounded-xl w-3/5" src={minigripLogo}></img>
           </div>
         </SwiperSlide>
         <SwiperSlide>
