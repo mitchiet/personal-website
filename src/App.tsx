@@ -89,7 +89,7 @@ function App() {
         </Headless.Field>
       </Navbar>
 
-      <div className="p-6 lg:p-10 flex max-lg:flex-col relative isolate min-h-svh w-full">
+      <div className="px-2 py-6 lg:p-10 flex max-lg:flex-col relative isolate min-h-svh w-full">
 
         {/* Desktop Sidebar */}
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">

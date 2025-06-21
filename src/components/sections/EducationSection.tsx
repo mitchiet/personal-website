@@ -15,8 +15,8 @@ function EducationSection({ ref }: EducationSectionProps) {
         <Heading>Education</Heading>
       </div>
       <br/>
-      <TAMLogo className="dark:hidden h-100 mx-auto" />
-      <TAMDarkLogo className="hidden dark:block h-100 mx-auto" />
+      <TAMLogo className="dark:hidden h-60 md:h-100 mx-auto" />
+      <TAMDarkLogo className="hidden dark:block h-60 md:h-100 mx-auto" />
       
     </div>
   )
