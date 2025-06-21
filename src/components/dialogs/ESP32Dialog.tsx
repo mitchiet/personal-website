@@ -9,13 +9,13 @@ import pic from '../../assets/images/esp32.jpg';
 function ESP32Dialog(props:any) {
   return (
     <Dialog open={props.isOpen} onClose={props.isOpenSetter} className={props.className}>
-      <DialogTitle className="inline-flex items-center">
+      <DialogTitle className="inline-flex items-center border-b-2 border-zinc-950/10 pb-4 dark:border-white/10 w-full">
         <Button plain className="float-start mr-2 cursor-pointer" onClick={() => props.isOpenSetter(false)}>
           <XMarkIcon />
         </Button>
         <span className="inline-block align-middle">Espressif ESP32 Microcontroller</span>
       </DialogTitle>
-      <DialogBody>
+      <DialogBody className="overflow-y-scroll max-h-130 pr-5">
         <Field>
           <p>
             My senior design project was to design an automated smoker system.
