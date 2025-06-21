@@ -16,8 +16,9 @@ svg {
 
 #main-nav {
     @apply text-zinc-950 dark:text-white
-        lg:bg-white lg:ring-zinc-950/5 dark:lg:bg-zinc-900 dark:lg:ring-white/10
-        bg-white ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10
+        ring-zinc-950/5 dark:ring-white/10
+        bg-zinc-100 dark:bg-zinc-950
+        fixed top-0 left-0 right-0 z-100 opacity-100 border-double border-b-4
 }
 
 .link {
