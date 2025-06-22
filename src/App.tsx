@@ -56,8 +56,26 @@ function App() {
       }
     }
 
-    // Listen for changes
+    // Listen for changes to system theme
     darkModePreference.addEventListener("change", applyTheme);
+
+    // Remove the inertness any time a catalyst dialog has set a focus trap
+    const callback = (mutationsList: any) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'inert') {
+          // The inert attribute has changed!
+          const targetElement = mutation.target;
+          if(targetElement.hasAttribute('inert'))
+            targetElement.inert = false;
+        }
+      }
+    };
+    const observer = new MutationObserver(callback);
+    const config = { attributes: true };
+    const targetElement = document.getElementById('root'); // Replace with your element's ID
+    if (targetElement)
+      observer.observe(targetElement, config);
+  
   }, []);
 
   const toggleDarkMode = () => {
@@ -89,7 +107,7 @@ function App() {
         </Headless.Field>
       </Navbar>
 
-      <div className="px-2 py-6 lg:p-10 flex max-lg:flex-col relative isolate min-h-svh w-full">
+      <div className="px-2 py-6 lg:p-10 flex max-lg:flex-col relative min-h-svh w-full">
 
         {/* Desktop Sidebar */}
         <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
@@ -154,7 +172,7 @@ function App() {
         </Headless.Dialog>
 
         {/* Main section */}
-        <main className="flex flex-1 flex-col pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
+        <main className="flex flex-1 flex-col isolate pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
           <div className="grow p-6 lg:p-10">
             <div className="mx-auto max-w-6xl">
               <EmploymentSection ref={employmentSectionRef} />
