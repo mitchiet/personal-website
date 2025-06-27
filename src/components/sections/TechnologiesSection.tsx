@@ -162,7 +162,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
 
       </div>
 
-      <ESP32Dialog className="absolute rounded-3xl inset-x-0 mx-auto mt-24 top-0 max-w-5/6 sm:max-w-lg" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
+      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
     </div>
   )
 }
