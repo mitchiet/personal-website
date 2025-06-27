@@ -92,7 +92,7 @@ function App() {
   let [showSidebar, setShowSidebar] = useState(false)
 
   return (
-    <div>
+    <div className="overflow-y-clip">
 
       {/* Navbar section */}
       <Navbar id="main-nav">
@@ -107,12 +107,12 @@ function App() {
         </Headless.Field>
       </Navbar>
 
-      <div className="px-2 py-6 lg:p-10 flex max-lg:flex-col relative min-h-svh w-full">
+      <div className="top-[5rem] flex max-lg:flex-col relative min-h-svh w-full">
 
         {/* Desktop Sidebar */}
-        <div className="fixed mt-14 inset-y-0 left-0 w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
+        <div className="fixed inset-y-0 left-0 top-[5rem] w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
-            <div className="p-4 mt-4">
+            <div className="p-4">
               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                 Employment
                 <BriefcaseIcon />
@@ -172,8 +172,8 @@ function App() {
         </Headless.Dialog>
 
         {/* Main section */}
-        <main className="flex flex-1 flex-col isolate pb-2 lg:min-w-0 mt-10 lg:mt-0 lg:pt-2 lg:pr-2 lg:pl-64">
-          <div className="grow p-6 lg:p-10">
+        <main className="flex flex-1 flex-col isolate lg:min-w-0 lg:pl-64 py-3">
+          <div className="px-6 lg:px-10 py-4 h-[calc(100vh_-_6.5rem)] overflow-y-scroll scrollbar scroll-pt-4">
             <div className="mx-auto max-w-6xl">
               <EmploymentSection ref={employmentSectionRef} />
               <br/><br/><br/><br/>
