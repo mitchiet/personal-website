@@ -4,6 +4,7 @@ import { Badge } from '../tailwind-catalyst/badge'
 import { Dropdown, DropdownButton, DropdownMenu } from '../tailwind-catalyst/dropdown'
 import { Heading } from '../tailwind-catalyst/heading'
 
+import AltiumDialog from '../dialogs/AltiumDialog'
 import ESP32Dialog from '../dialogs/ESP32Dialog'
 
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
@@ -60,6 +61,7 @@ interface TechnologiesSectionProps {
 }
 
 function TechnologiesSection({ ref }: TechnologiesSectionProps) {
+  let [isAltiumDialogOpen, setIsAltiumDialogOpen] = useState(false)
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
   return (
@@ -195,7 +197,11 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                 <CadenceIcon className="tech-icon dark:hidden" />
                 <CadenceDarkIcon className="tech-icon hidden dark:block" />
               </div>
-              <div className="tech-icon-container"><AltiumIcon className="tech-icon invert dark:filter-none" /></div>
+              <div className="tech-icon-container">
+                <button onClick={() => setIsAltiumDialogOpen(true)} className="tech-more-info orange-shadow">
+                  <AltiumIcon className="tech-icon invert dark:filter-none" />
+                </button>
+              </div>
               <div className="tech-icon-container"><LatexIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><UnityIcon className="tech-icon dark:fill-white" /></div>
             </div>
@@ -295,7 +301,10 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
 
       </div>
 
-      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg" isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
+      <AltiumDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg"
+          isOpen={isAltiumDialogOpen} isOpenSetter={setIsAltiumDialogOpen} isESP32DialogOpenSetter={setIsESP32DialogOpen} />
+      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg"
+          isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
     </div>
   )
 }
