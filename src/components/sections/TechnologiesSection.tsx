@@ -131,7 +131,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             <Dropdown>
               <DropdownButton
                   onClick={() => setIsWebDropdownVisible(!isWebDropdownVisible)}
-                  color="green" className="cursor-pointer m-2 flex-1">
+                  color="purple" className="cursor-pointer m-2 flex-1">
                 More
                 {!isWebDropdownVisible && <ChevronDownIcon />}
                 {isWebDropdownVisible && <ChevronUpIcon />}
