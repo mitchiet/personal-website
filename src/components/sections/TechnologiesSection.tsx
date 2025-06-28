@@ -1,8 +1,12 @@
 import { useState } from 'react'
 
+import { Badge } from '../tailwind-catalyst/badge'
+import { Dropdown, DropdownButton, DropdownMenu } from '../tailwind-catalyst/dropdown'
 import { Heading } from '../tailwind-catalyst/heading'
 
 import ESP32Dialog from '../dialogs/ESP32Dialog'
+
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
 import CPPIcon from '../../assets/logos/technologies/cpp3-svgrepo-com.svg?react';
 import CIcon from '../../assets/logos/technologies/c3-svgrepo-com.svg?react';
@@ -25,8 +29,8 @@ import GitIcon from '../../assets/logos/technologies/git-svgrepo-com.svg?react';
 import SVNIcon from '../../assets/logos/technologies/subversion-svgrepo-com.svg?react';
 import DockerIcon from '../../assets/logos/technologies/docker-svgrepo-com.svg?react';
 import PodmanIcon from '../../assets/logos/technologies/podmanio-icon.svg?react';
-import GitlabIcon from '../../assets/logos/technologies/gitlab-svgrepo-com.svg?react';
-import GithubIcon from '../../assets/logos/technologies/github-svgrepo-com.svg?react';
+import GitLabIcon from '../../assets/logos/technologies/gitlab-svgrepo-com.svg?react';
+import GitHubIcon from '../../assets/logos/technologies/github-svgrepo-com.svg?react';
 
 import JiraIcon from '../../assets/logos/technologies/jira-svgrepo-com.svg?react';
 import ConfluenceIcon from '../../assets/logos/technologies/confluence-svgrepo-com.svg?react';
@@ -58,6 +62,13 @@ interface TechnologiesSectionProps {
 function TechnologiesSection({ ref }: TechnologiesSectionProps) {
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
 
+  const [isDevelopmentDropdownVisible, setIsDevelopmentDropdownVisible] = useState(false);
+  const [isWebDropdownVisible, setIsWebDropdownVisible] = useState(false);
+  const [isWorkflowDropdownVisible, setIsWorkflowDropdownVisible] = useState(false);
+  const [isDesignDropdownVisible, setIsDesignDropdownVisible] = useState(false);
+  const [isDatabaseDropdownVisible, setIsDatabaseDropdownVisible] = useState(false);
+  const [isArchOSDropdownVisible, setIsArchOSDropdownVisible] = useState(false);
+
   return (
     <div ref={ref}>
       <div className="flex w-full items-end justify-between gap-4 border-b-2 border-zinc-950/10 pb-4 dark:border-white/10">
@@ -78,6 +89,27 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><VerilogIcon className="tech-icon" /></div>
             </div>
           </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsDevelopmentDropdownVisible(!isDevelopmentDropdownVisible)}
+                  color="rose" className="cursor-pointer m-2 flex-1">
+                More
+                {!isDevelopmentDropdownVisible && <ChevronDownIcon />}
+                {isDevelopmentDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="rose">C++</Badge>
+                  <Badge color="rose">C</Badge>
+                  <Badge color="rose">Python</Badge>
+                  <Badge color="rose">MATLAB</Badge>
+                  <Badge color="rose">Java</Badge>
+                  <Badge color="rose">Verilog</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
@@ -95,6 +127,30 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><BootstrapIcon className="tech-icon" /></div>
             </div>
           </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsWebDropdownVisible(!isWebDropdownVisible)}
+                  color="green" className="cursor-pointer m-2 flex-1">
+                More
+                {!isWebDropdownVisible && <ChevronDownIcon />}
+                {isWebDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="purple">Javascript</Badge>
+                  <Badge color="purple">Typescript</Badge>
+                  <Badge color="purple">PHP</Badge>
+                  <Badge color="purple">React</Badge>
+                  <Badge color="purple">AngularJS</Badge>
+                  <Badge color="purple">HTML</Badge>
+                  <Badge color="purple">CSS</Badge>
+                  <Badge color="purple">Tailwind CSS</Badge>
+                  <Badge color="purple">Bootstrap</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
@@ -105,11 +161,34 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><SVNIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><DockerIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><PodmanIcon className="tech-icon" /></div>
-              <div className="tech-icon-container"><GitlabIcon className="tech-icon" /></div>
-              <div className="tech-icon-container"><GithubIcon className="tech-icon dark:fill-white" /></div>
+              <div className="tech-icon-container"><GitLabIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><GitHubIcon className="tech-icon dark:fill-white" /></div>
               <div className="tech-icon-container"><JiraIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><ConfluenceIcon className="tech-icon" /></div>
             </div>
+          </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsWorkflowDropdownVisible(!isWorkflowDropdownVisible)}
+                  color="sky" className="cursor-pointer m-2 flex-1">
+                More
+                {!isWorkflowDropdownVisible && <ChevronDownIcon />}
+                {isWorkflowDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="sky">Git</Badge>
+                  <Badge color="sky">Subversion (SVN)</Badge>
+                  <Badge color="sky">Docker</Badge>
+                  <Badge color="sky">Podman</Badge>
+                  <Badge color="sky">GitLab</Badge>
+                  <Badge color="sky">GitHub</Badge>
+                  <Badge color="sky">Jira</Badge>
+                  <Badge color="sky">Confluence</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
           </div>
         </div>
 
@@ -128,6 +207,27 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><UnityIcon className="tech-icon dark:fill-white" /></div>
             </div>
           </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsDesignDropdownVisible(!isDesignDropdownVisible)}
+                  color="orange" className="cursor-pointer m-2 flex-1">
+                More
+                {!isDesignDropdownVisible && <ChevronDownIcon />}
+                {isDesignDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="orange">Xilinx Vivado</Badge>
+                  <Badge color="orange">LabVIEW</Badge>
+                  <Badge color="orange">Cadence Virtuoso</Badge>
+                  <Badge color="orange">Altium</Badge>
+                  <Badge color="orange">LaTeX</Badge>
+                  <Badge color="orange">Unity</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
 
         <div className="relative flex flex-col space-x-3 rounded-lg border-1">
@@ -138,6 +238,24 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                <div className="tech-icon-container"><MySQLIcon className="tech-icon" /></div>
                <div className="tech-icon-container"><SQLiteIcon className="tech-icon" /></div>
             </div>
+          </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsDatabaseDropdownVisible(!isDatabaseDropdownVisible)}
+                  color="green" className="cursor-pointer m-2 flex-1">
+                More
+                {!isDatabaseDropdownVisible && <ChevronDownIcon />}
+                {isDatabaseDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="green">MongoDB</Badge>
+                  <Badge color="green">MySQL</Badge>
+                  <Badge color="green">SQLite</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
           </div>
         </div>
 
@@ -157,6 +275,28 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                 </button>
               </div>
             </div>
+          </div>
+          <div className="relative w-full flex">
+            <Dropdown>
+              <DropdownButton
+                  onClick={() => setIsArchOSDropdownVisible(!isArchOSDropdownVisible)}
+                  color="pink" className="cursor-pointer m-2 flex-1">
+                More
+                {!isArchOSDropdownVisible && <ChevronDownIcon />}
+                {isArchOSDropdownVisible && <ChevronUpIcon />}
+              </DropdownButton>
+              <DropdownMenu modal={false} anchor="bottom">
+                <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
+                  <Badge color="pink">Red Hat Enterprise Linux</Badge>
+                  <Badge color="pink">Rocky Linux</Badge>
+                  <Badge color="pink">CentOS</Badge>
+                  <Badge color="pink">Windows</Badge>
+                  <Badge color="pink">MacOS</Badge>
+                  <Badge color="pink">Digilent Z7 FPGA</Badge>
+                  <Badge color="pink">EspressIf ESP32 MCU</Badge>
+                </div>
+              </DropdownMenu>
+            </Dropdown>
           </div>
         </div>
 
