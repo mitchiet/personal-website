@@ -70,7 +70,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
       <br/>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-rose-500">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Development</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
@@ -105,7 +105,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           </Dropdown>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-purple-500">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Web</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
@@ -146,7 +146,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           </Dropdown>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-sky-500">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Workflow</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
@@ -185,7 +185,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           </Dropdown>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-orange-500">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Design</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
@@ -223,7 +223,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           </Dropdown>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-green-600">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Database</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
@@ -252,7 +252,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
           </Dropdown>
         </div>
 
-        <div className="relative flex flex-col space-x-3 rounded-lg border-1">
+        <div className="relative flex flex-col space-x-3 rounded-lg border-1 shadow-lg shadow-pink-500">
           <div className="min-w-0 flex-1 mx-1 my-2 flex-wrap">
             <h1 className="text-xl mb-1 ml-2">Arch / OS</h1>
             <div className="grid grid-cols-3 xl:grid-cols-4">
