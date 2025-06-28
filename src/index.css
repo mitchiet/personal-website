@@ -70,8 +70,8 @@ svg {
     border-double border-b-0
     shadow-[0_8px_5px_-6px_theme(colors.black)]
     dark:shadow-[0_8px_5px_-6px_theme(colors.white)]
-    hover:shadow-[0_8px_5px_-6px_theme(colors.blue.600)]
-    active:shadow-[0_8px_5px_-6px_theme(colors.blue.600)]
-    dark:hover:shadow-[0_8px_5px_-6px_theme(colors.blue.300)]
-    dark:active:shadow-[0_8px_5px_-6px_theme(colors.blue.300)]
+}
+.pink-shadow {
+    @apply hover:shadow-[0_8px_5px_-6px_theme(colors.pink.500)]
+    active:shadow-[0_8px_5px_-6px_theme(colors.pink.500)]
 }

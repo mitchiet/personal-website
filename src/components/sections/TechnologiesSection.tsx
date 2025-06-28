@@ -270,7 +270,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><AppleIcon className="tech-icon dark:invert" /></div>
               <div className="tech-icon-container"><DigilentIcon className="tech-icon" /></div>
               <div className="tech-icon-container">
-                <button onClick={() => setIsESP32DialogOpen(true)} className="tech-more-info">
+                <button onClick={() => setIsESP32DialogOpen(true)} className="tech-more-info pink-shadow">
                   <EspressifIcon className="tech-icon" />
                 </button>
               </div>
