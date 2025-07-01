@@ -6,6 +6,7 @@ import { Heading } from '../tailwind-catalyst/heading'
 
 import AltiumDialog from '../dialogs/AltiumDialog'
 import ESP32Dialog from '../dialogs/ESP32Dialog'
+import TailwindCSSDialog from '../dialogs/TailwindCSSDialog'
 
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
@@ -63,6 +64,7 @@ interface TechnologiesSectionProps {
 function TechnologiesSection({ ref }: TechnologiesSectionProps) {
   let [isAltiumDialogOpen, setIsAltiumDialogOpen] = useState(false)
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
+  let [isTailwindCSSDialogOpen, setIsTailwindCSSDialogOpen] = useState(false)
 
   return (
     <div ref={ref}>
@@ -118,7 +120,11 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><AngularJSIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><HTMLIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><CSSIcon className="tech-icon" /></div>
-              <div className="tech-icon-container"><TailwindCSSIcon className="tech-icon" /></div>
+               <div className="tech-icon-container">
+                <button onClick={() => setIsTailwindCSSDialogOpen(true)} className="tech-more-info purple-shadow">
+                  <TailwindCSSIcon className="tech-icon" />
+                </button>
+              </div>
               <div className="tech-icon-container"><BootstrapIcon className="tech-icon" /></div>
             </div>
           </div>
@@ -301,10 +307,12 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
 
       </div>
 
-      <AltiumDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg"
+      <AltiumDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
           isOpen={isAltiumDialogOpen} isOpenSetter={setIsAltiumDialogOpen} isESP32DialogOpenSetter={setIsESP32DialogOpen} />
-      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto bottom-16 top-26 min-h-50 max-w-5/6 sm:max-w-lg"
+      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
           isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
+      <TailwindCSSDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+          isOpen={isTailwindCSSDialogOpen} isOpenSetter={setIsTailwindCSSDialogOpen} />
     </div>
   )
 }

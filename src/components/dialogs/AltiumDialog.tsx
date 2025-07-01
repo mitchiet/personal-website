@@ -16,7 +16,7 @@ function AltiumDialog(props:any) {
         </Button>
         <span className="inline-block align-middle">Altium</span>
       </DialogTitle>
-      <DialogBody className="overflow-y-scroll max-h-130 pr-5 scrollbar">
+      <DialogBody className="overflow-y-auto max-h-130 pr-5 scrollbar">
         <Field>
           <p>
             I used Altium to design the PCB for my senior design project. See
