@@ -42,7 +42,7 @@ import LabVIEWIcon from '../../assets/logos/technologies/labview-svgrepo-com.svg
 import CadenceIcon from '../../assets/logos/technologies/cadence.svg?react';
 import CadenceDarkIcon from '../../assets/logos/technologies/cadence-dark.svg?react';
 import AltiumIcon from '../../assets/logos/technologies/altium.svg?react';
-import LatexIcon from '../../assets/logos/technologies/latex.svg?react';
+import LaTeXIcon from '../../assets/logos/technologies/latex.svg?react';
 import UnityIcon from '../../assets/logos/technologies/unity-svgrepo-com.svg?react';
 
 import MongoDBIcon from '../../assets/logos/technologies/mongodb-svgrepo-com.svg?react';
@@ -208,7 +208,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   <AltiumIcon className="tech-icon invert dark:filter-none" />
                 </button>
               </div>
-              <div className="tech-icon-container"><LatexIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><LaTeXIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><UnityIcon className="tech-icon dark:fill-white" /></div>
             </div>
           </div>
