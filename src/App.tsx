@@ -13,7 +13,9 @@ import { Bars3Icon } from '@heroicons/react/24/solid'
 import { BriefcaseIcon } from '@heroicons/react/24/solid'
 import { CpuChipIcon } from '@heroicons/react/24/solid'
 import { GlobeAltIcon } from '@heroicons/react/24/solid'
+import { UserIcon } from '@heroicons/react/24/solid'
 
+import IntroductionSection from './components/sections/IntroductionSection'
 import EmploymentSection from './components/sections/EmploymentSection'
 import EducationSection from "./components/sections/EducationSection"
 import TechnologiesSection from "./components/sections/TechnologiesSection"
@@ -23,6 +25,7 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  const introductionSectionRef = useRef<HTMLDivElement | null>(null)
   const educationSectionRef = useRef<HTMLDivElement | null>(null)
   const employmentSectionRef = useRef<HTMLDivElement | null>(null)
   const technologiesSectionRef = useRef<HTMLDivElement | null>(null)
@@ -113,6 +116,10 @@ function App() {
         <div className="fixed inset-y-0 left-0 top-[5rem] w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
           <Sidebar>
             <div className="p-4">
+               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(introductionSectionRef)}>
+                Introduction
+                <UserIcon />
+              </Button>
               <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                 Employment
                 <BriefcaseIcon />
@@ -150,6 +157,10 @@ function App() {
                 </Button>
               </div>
               <div className="p-4">
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(introductionSectionRef)}>
+                  Introduction
+                  <UserIcon />
+                </Button>
                 <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
                   Employment
                   <BriefcaseIcon />
@@ -175,6 +186,8 @@ function App() {
         <main className="flex flex-1 flex-col isolate lg:min-w-0 lg:pl-64 py-3">
           <div className="px-6 lg:px-10 pt-4 h-[calc(100dvh_-_6.5rem)] overflow-y-scroll scrollbar scroll-pt-4">
             <div className="mx-auto max-w-7xl">
+              <IntroductionSection ref={introductionSectionRef} />
+              <br/><br/><br/><br/>
               <EmploymentSection ref={employmentSectionRef} />
               <br/><br/><br/><br/>
               <EducationSection ref={educationSectionRef} />
