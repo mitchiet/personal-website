@@ -13,7 +13,7 @@ body {
     @apply !overflow-y-clip
 }
 
-#headlessui-portal-root > div > div > div > div{
+#headlessui-portal-root > div > div > div > div {
     @apply !overflow-y-clip
 }
 
