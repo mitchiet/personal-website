@@ -19,7 +19,7 @@ function LaTeXDialog(props:any) {
         <Button plain className="float-start mr-2 cursor-pointer" onClick={() => props.isOpenSetter(false)}>
           <XMarkIcon />
         </Button>
-        <span className="inline-block align-middle">Tailwind CSS</span>
+        <span className="inline-block align-middle">LaTeX</span>
       </DialogTitle>
       <DialogBody className="overflow-y-auto max-h-130 pr-5 scrollbar">
         <Field>
