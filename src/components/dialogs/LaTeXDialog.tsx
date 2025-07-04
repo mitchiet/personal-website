@@ -24,7 +24,7 @@ function LaTeXDialog(props:any) {
       <DialogBody className="overflow-y-auto max-h-130 pr-5 scrollbar">
         <Field>
           <p>
-            The resume below was designed using LaTeX.
+            The résumé below was designed using LaTeX.
           </p>
         </Field>
         <br/>
