@@ -9,7 +9,7 @@ import PDFViewer from '../PDFViewer';
 
 function LaTeXDialog(props:any) {
 
-  function openResume() {
+  const openResume = () => {
     window.open("src/assets/mitchell_taylor_resume.pdf", '_blank'); // Open the URL in a new tab
   }
 
