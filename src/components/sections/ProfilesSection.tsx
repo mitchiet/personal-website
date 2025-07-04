@@ -1,5 +1,6 @@
 import { Heading } from '../tailwind-catalyst/heading'
 
+import { DocumentTextIcon } from '@heroicons/react/24/solid'
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
 import GitHubLogo from '../../assets/logos/GitHub_Logo.png';
@@ -44,6 +45,15 @@ function ProfilesSection({ ref }: ProfilesSectionProps) {
           <div className="flex content-center items-center">
             <EnvelopeIcon className="h-20" />
             <h1 className="text-6xl" >Email</h1>
+          </div>
+        </a>
+      </div>
+       <br/><br/>
+      <div className="flex justify-center">
+        <a href="src/assets/mitchell_taylor_resume.pdf" target="_blank">
+          <div className="flex content-center items-center">
+            <DocumentTextIcon className="h-20" />
+            <h1 className="text-6xl" >Résumé</h1>
           </div>
         </a>
       </div>
