@@ -7,7 +7,7 @@ import GitHubLogo from '../../assets/logos/GitHub_Logo.png';
 import GitHubMarkLogo from '../../assets/logos/github-mark.png';
 import GitHubDarkLogo from '../../assets/logos/GitHub_Logo_White.png';
 import GitHubMarkDarkLogo from '../../assets/logos/github-mark-white.png';
-import LinkedInLogo from '../../assets/logos/Li-Logo.png';
+import LinkedInLogo from '../../assets/logos/LI-Logo.png';
 
 interface ProfilesSectionProps {
     ref?: React.Ref<HTMLDivElement>;
