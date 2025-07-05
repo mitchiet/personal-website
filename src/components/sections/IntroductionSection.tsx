@@ -1,5 +1,7 @@
 import { Heading } from '../tailwind-catalyst/heading'
 
+import pic from '../../assets/images/lincoln-memorial.jpg';
+
 interface IntroductionSectionProps {
     ref?: React.Ref<HTMLDivElement>;
 }
@@ -12,7 +14,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         <Heading>Introduction</Heading>
       </div>
       <br/>
-      
+      <img className="mx-auto rounded-xl border-2 h-[70dvh]" src={pic} alt="Totally Professional Headshot" />
     </div>
   )
 }
