@@ -32,7 +32,7 @@ function LaTeXDialog(props:any) {
         <br/>
         <Field>
           <div className="flex flex-col w-[90%] m-auto">
-            <PDFViewer file="src/assets/mitchell_taylor_resume.pdf" />
+            <PDFViewer file={resume} />
           </div>
         </Field>
         <br/>
