@@ -9,6 +9,8 @@ import GitHubDarkLogo from '../../assets/logos/GitHub_Logo_White.png';
 import GitHubMarkDarkLogo from '../../assets/logos/github-mark-white.png';
 import LinkedInLogo from '../../assets/logos/LI-Logo.png';
 
+import resume from '../../assets/mitchell_taylor_resume.pdf';
+
 interface ProfilesSectionProps {
     ref?: React.Ref<HTMLDivElement>;
 }
@@ -50,7 +52,7 @@ function ProfilesSection({ ref }: ProfilesSectionProps) {
       </div>
        <br/><br/>
       <div className="flex justify-center">
-        <a href="src/assets/mitchell_taylor_resume.pdf" target="_blank">
+        <a href={resume} target="_blank">
           <div className="flex content-center items-center">
             <DocumentTextIcon className="h-20" />
             <h1 className="text-6xl" >Résumé</h1>

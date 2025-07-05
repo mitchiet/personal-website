@@ -7,10 +7,12 @@ import PropTypes from 'prop-types';
 
 import PDFViewer from '../PDFViewer';
 
+import resume from '../../assets/mitchell_taylor_resume.pdf';
+
 function LaTeXDialog(props:any) {
 
   const openResume = () => {
-    window.open("src/assets/mitchell_taylor_resume.pdf", '_blank'); // Open the URL in a new tab
+    window.open(resume, '_blank'); // Open the URL in a new tab
   }
 
   return (
