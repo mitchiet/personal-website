@@ -25,19 +25,39 @@ function ProfilesSection({ ref }: ProfilesSectionProps) {
       <br/>
       <div className="flex justify-center">
         <a href="https://www.linkedin.com/in/mitchell-h-taylor8">
-          <img className="cursor-pointer h-20 dark:bg-white p-3 rounded-xl" src={LinkedInLogo} alt="LinkedIn" />
+          <img className="cursor-pointer h-20 dark:bg-white p-3 rounded-xl"
+              src={LinkedInLogo}
+              alt="LinkedIn"
+              onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+          />
         </a>
       </div>
       <br/><br/>
       <div className="flex justify-center">
         <a href="https://github.com/mitchiet">
           <div className="flex dark:hidden">
-            <img className="h-20" src={GitHubLogo} alt="GitHub" />
-            <img className="h-20" src={GitHubMarkLogo} alt="GitHub Cat" />
+            <img className="h-20"
+                src={GitHubLogo}
+                alt="GitHub" 
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+            <img className="h-20"
+                src={GitHubMarkLogo}
+                alt="GitHub Cat"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
           </div>
           <div className="hidden dark:flex">
-            <img className="h-20" src={GitHubDarkLogo} alt="GitHub" />
-            <img className="h-20" src={GitHubMarkDarkLogo} alt="GitHub Cat" />
+            <img className="h-20"
+                src={GitHubDarkLogo}
+                alt="GitHub"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+            <img className="h-20"
+                src={GitHubMarkDarkLogo}
+                alt="GitHub Cat"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
           </div>
         </a>
       </div>

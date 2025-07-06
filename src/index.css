@@ -21,6 +21,14 @@ svg {
   pointer-events: none;
 }
 
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+img.loaded {
+  opacity: 1;
+}
+
 #main-nav {
     @apply text-zinc-950 dark:text-white
         ring-zinc-950/5 dark:ring-white/10
