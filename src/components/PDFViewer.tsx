@@ -11,6 +11,15 @@ const PDFViewer: React.FC<PDFViewerProps> = (props) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      // Trigger the transition after a short delay
+      setTimeout(() => setVisible(true), 100); // Delay to ensure DOM update
+    }
+  }, []);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -73,7 +82,7 @@ const PDFViewer: React.FC<PDFViewerProps> = (props) => {
 
   return (
     <div ref={containerRef} style={{ width: '100%', display: 'flex' }}>
-      <canvas className="rounded-lg" ref={canvasRef} />
+      <canvas className={visible ? 'visible rounded-lg' : 'rounded-lg'} ref={canvasRef} />
     </div>
   );
 };

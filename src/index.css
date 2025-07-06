@@ -29,6 +29,14 @@ img.loaded {
   opacity: 1;
 }
 
+canvas {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+canvas.visible {
+  opacity: 1;
+}
+
 #main-nav {
     @apply text-zinc-950 dark:text-white
         ring-zinc-950/5 dark:ring-white/10
