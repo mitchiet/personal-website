@@ -27,7 +27,7 @@ function AltiumDialog(props:any) {
         <Field>
           <img className="rounded-xl border-2"
               src={pcbPic}
-              alt="PCB Deisgn"
+              alt="PCB Design"
               onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
           />
         </Field>
