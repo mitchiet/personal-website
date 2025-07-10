@@ -14,11 +14,13 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         <Heading>Introduction</Heading>
       </div>
       <br/>
-      <img className="mx-auto rounded-xl border-2 h-[70dvh]"
-          src={pic}
-          alt="Totally Professional Headshot"
-          onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-      />
+      <div className="h-[70dvh]">
+        <img className="mx-auto rounded-xl border-2 h-full"
+            src={pic}
+            alt="Totally Professional Headshot"
+            onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+        />
+      </div>
     </div>
   )
 }

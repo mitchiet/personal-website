@@ -27,11 +27,13 @@ function ESP32Dialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <img className="rounded-xl border-2"
-              src={pic}
-              alt="Senior Design Control Unit"
-              onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-          />
+          <div className="w-full aspect-[2.6/2.3]">
+            <img className="rounded-xl border-2"
+                src={pic}
+                alt="Senior Design Control Unit"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+          </div>
         </Field>
         <br/>
         <Field>

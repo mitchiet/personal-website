@@ -25,11 +25,13 @@ function AltiumDialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <img className="rounded-xl border-2"
-              src={pcbPic}
-              alt="PCB Design"
-              onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-          />
+          <div className="w-full aspect-[9/7.8]">
+            <img className="rounded-xl border-2"
+                src={pcbPic}
+                alt="PCB Design"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+          </div>
         </Field>
         <br/>
         <Field>
@@ -46,11 +48,13 @@ function AltiumDialog(props:any) {
         </Field>
          <br/>
         <Field>
-          <img className="rounded-xl border-2"
-              src={pcb3DPic}
-              alt="3D PCB View"
-              onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-          />
+          <div className="w-full aspect-[5/4]">
+            <img className="rounded-xl border-2"
+                src={pcb3DPic}
+                alt="3D PCB View"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+          </div>
         </Field>
       </DialogBody>
     </Dialog>

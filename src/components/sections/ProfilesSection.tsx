@@ -25,35 +25,37 @@ function ProfilesSection({ ref }: ProfilesSectionProps) {
       <br/>
       <div className="flex justify-center">
         <a href="https://www.linkedin.com/in/mitchell-h-taylor8">
-          <img className="cursor-pointer h-20 dark:bg-white p-3 rounded-xl"
-              src={LinkedInLogo}
-              alt="LinkedIn"
-              onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-          />
+          <div className="flex h-20">
+            <img className="cursor-pointer h-full dark:bg-white p-3 rounded-xl"
+                src={LinkedInLogo}
+                alt="LinkedIn"
+                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+            />
+          </div>
         </a>
       </div>
       <br/><br/>
       <div className="flex justify-center">
         <a href="https://github.com/mitchiet">
-          <div className="flex dark:hidden">
-            <img className="h-20"
+          <div className="flex dark:hidden h-20">
+            <img className="h-full"
                 src={GitHubLogo}
                 alt="GitHub" 
                 onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
             />
-            <img className="h-20"
+            <img className="h-full"
                 src={GitHubMarkLogo}
                 alt="GitHub Cat"
                 onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
             />
           </div>
-          <div className="hidden dark:flex">
-            <img className="h-20"
+          <div className="hidden dark:flex h-20">
+            <img className="h-full"
                 src={GitHubDarkLogo}
                 alt="GitHub"
                 onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
             />
-            <img className="h-20"
+            <img className="h-full"
                 src={GitHubMarkDarkLogo}
                 alt="GitHub Cat"
                 onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}

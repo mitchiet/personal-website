@@ -31,7 +31,7 @@ function LaTeXDialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <div className="flex flex-col w-[90%] m-auto">
+          <div className="flex flex-col w-[90%] aspect-[8.5/11] m-auto">
             <PDFViewer file={resume} />
           </div>
         </Field>
