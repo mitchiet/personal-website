@@ -23,7 +23,7 @@ function LaTeXDialog(props:any) {
         </Button>
         <span className="inline-block align-middle">LaTeX</span>
       </DialogTitle>
-      <DialogBody className="overflow-y-auto max-h-130 pr-5 scrollbar">
+      <DialogBody className="overflow-y-auto max-h-130 pr-5 scrollbar overflow-x-clip">
         <Field>
           <p>
             The résumé below was designed using LaTeX.
