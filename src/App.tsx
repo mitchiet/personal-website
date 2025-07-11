@@ -157,23 +157,38 @@ function App() {
                 </Button>
               </div>
               <div className="p-4">
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(introductionSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => {
+                      scrollToElementRef(introductionSectionRef);
+                      setShowSidebar(false);
+                    }}>
                   Introduction
                   <UserIcon />
                 </Button>
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(employmentSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => {
+                      scrollToElementRef(employmentSectionRef);
+                      setShowSidebar(false);
+                    }}>
                   Employment
                   <BriefcaseIcon />
                 </Button>
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(educationSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => {
+                      scrollToElementRef(educationSectionRef);
+                      setShowSidebar(false);
+                    }}>
                   Education
                   <AcademicCapIcon />
                 </Button>
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(technologiesSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => {
+                      scrollToElementRef(technologiesSectionRef);
+                      setShowSidebar(false);
+                    }}>
                   Technologies
                   <CpuChipIcon />
                 </Button>
-                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(profilesSectionRef)}>
+                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => {
+                      scrollToElementRef(profilesSectionRef);
+                      setShowSidebar(false);
+                    }}>
                   Profiles
                   <GlobeAltIcon />
                 </Button>
