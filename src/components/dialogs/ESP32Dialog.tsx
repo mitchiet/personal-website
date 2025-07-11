@@ -27,7 +27,7 @@ function ESP32Dialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <div className="w-full aspect-[2.6/2.3]">
+          <div className="w-[90%] mx-auto aspect-[2.6/2.3]">
             <img className="rounded-xl border-2"
                 src={pic}
                 alt="Senior Design Control Unit"

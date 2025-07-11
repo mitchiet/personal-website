@@ -25,7 +25,7 @@ function AltiumDialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <div className="w-full aspect-[9/7.8]">
+          <div className="w-[90%] mx-auto aspect-[9/7.8]">
             <img className="rounded-xl border-2"
                 src={pcbPic}
                 alt="PCB Design"
@@ -48,7 +48,7 @@ function AltiumDialog(props:any) {
         </Field>
          <br/>
         <Field>
-          <div className="w-full aspect-[5/4]">
+          <div className="w-[90%] mx-auto aspect-[5/4]">
             <img className="rounded-xl border-2"
                 src={pcb3DPic}
                 alt="3D PCB View"
