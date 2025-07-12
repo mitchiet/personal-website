@@ -62,7 +62,7 @@ canvas.visible {
 }
 
 .swiper-wrapper {
-    @apply items-center pb-10
+    @apply items-center pb-10 visible
 }
 .swiper-pagination-bullet {
     @apply bg-black dark:bg-white

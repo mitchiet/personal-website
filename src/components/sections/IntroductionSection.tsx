@@ -40,7 +40,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
   const swiperContent = useMemo(() => (
     <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
-        className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)]"
+        className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)] overflow-visible"
         virtual={false}
         watchSlidesProgress
         slidesPerView="auto"
@@ -61,7 +61,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         }}
         modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
       {images.map((src, index) => (
-        <SwiperSlide key={index} className="!w-auto">
+        <SwiperSlide key={index} className="!w-auto overflow-visible">
           <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block [backface-visibility:hidden] [transform-style:preserve-3d]"
             src={src}
             loading="eager"
