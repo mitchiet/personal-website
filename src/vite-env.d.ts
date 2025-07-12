@@ -3,6 +3,8 @@
 
 // For swiper
 declare module 'swiper/css' {}
+declare module 'swiper/css/effect-coverflow' {}
+declare module 'swiper/css/free-mode' {}
 declare module 'swiper/css/grid' {}
 declare module 'swiper/css/navigation' {}
 declare module 'swiper/css/pagination' {}
