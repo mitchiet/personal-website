@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 
 import { Heading } from '../tailwind-catalyst/heading'
 
@@ -16,6 +16,8 @@ import pic2 from '../../assets/images/foo-fighters.jpg';
 import pic3 from '../../assets/images/suarez.jpg';
 import pic4 from '../../assets/images/volunteer-football.jpg';
 import pic5 from '../../assets/images/coffee.jpg';
+
+const images = [pic1, pic2, pic3, pic4, pic5];
 
 interface IntroductionSectionProps {
     ref?: React.Ref<HTMLDivElement>;
@@ -35,6 +37,40 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
     }
   };
 
+  const swiperContent = useMemo(() => (
+    <Swiper
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        className="relative h-[48dvh] md:h-[64dvh]"
+        slidesPerView="auto"
+        effect={'coverflow'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false
+        }}
+        spaceBetween={30}
+        centeredSlides
+        freeMode
+        navigation
+        pagination={{
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
+      {images.map((src, index) => (
+        <SwiperSlide key={index} className="!w-auto">
+          <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
+            src={src}
+            alt={`Slide ${index}`}
+            onLoad={handleImageLoad}
+            onError={handleImageLoad}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  ), [images]); // Only re-run if `images` changes
+
   return (
     <div ref={ref}>
       <div className="flex w-full items-end justify-between gap-4 border-b-2 border-zinc-950/10 pb-4 dark:border-white/10">
@@ -42,77 +78,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
       </div>
       <br/>
       <div>
-        <Swiper
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            className="relative h-[48dvh] md:h-[64dvh]"
-            slidesPerView="auto"
-            effect={'coverflow'}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            spaceBetween={30}
-            centeredSlides
-            freeMode
-            navigation
-            pagination={{
-              clickable: true,
-            }}
-            modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
-          <SwiperSlide className="!w-auto">
-            <div className="inline-block">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
-                src={pic1}
-                alt="Totally Professional Headshot at the Lincoln Memorial"
-                onLoad={handleImageLoad}
-                onError={handleImageLoad}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="inline-block">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
-                src={pic2}
-                alt="Totally Professional Headshot at Dos Equis Pavilion"
-                onLoad={handleImageLoad}
-                onError={handleImageLoad}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="inline-block">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
-                src={pic3}
-                alt="Totally Professional Headshot at Topgolf"
-                onLoad={handleImageLoad}
-                onError={handleImageLoad}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="inline-block">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
-                src={pic4}
-                alt="Totally Professional Headshot at an enemy football stadium"
-                onLoad={handleImageLoad}
-                onError={handleImageLoad}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="inline-block">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block"
-                src={pic5}
-                alt="Totally Professional Headshot on a hike"
-                onLoad={handleImageLoad}
-                onError={handleImageLoad}
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
+         {swiperContent}
       </div>
     </div>
   )
