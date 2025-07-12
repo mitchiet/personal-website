@@ -44,7 +44,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
         <SwiperSlide>
           <div className="flex items-center justify-center">
             <div className="w-7/10">
-              <img className="dark:bg-white rounded-xl h-full mx-auto"
+              <img className="dark:bg-white rounded-xl mx-auto"
                   src={minigripLogo}
                   alt="Minigrip"
                   onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
