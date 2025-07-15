@@ -55,7 +55,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
         <SwiperSlide>
           <div className="mx-15">
             <div className="flow-root">
-              <h1 className="float-left underline">L3Harris</h1>
+              <h1 className="float-left font-bold">L3Harris</h1>
               <h1 className="float-right">2020 - Present</h1>
             </div>
             <h1 className="text-left italic">Greenville, Texas</h1>
@@ -65,7 +65,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
         <SwiperSlide>
           <div className="mx-15">
             <div className="flow-root">
-              <h1 className="float-left underline">Minigrip</h1>
+              <h1 className="float-left font-bold">Minigrip</h1>
               <h1 className="float-right">2019</h1>
             </div>
             <h1 className="text-left italic">Seguin, Texas</h1>
