@@ -15,8 +15,21 @@ function EducationSection({ ref }: EducationSectionProps) {
         <Heading>Education</Heading>
       </div>
       <br/>
+      <p className="mx-15">
+        Howdy! My name is Mitchell Taylor, and I am the
+        loudest and proudest member of the Fightin' Texas Aggie Class of 2021!
+      </p>
       <TAMLogo className="dark:hidden h-60 md:h-100 mx-auto" />
       <TAMDarkLogo className="hidden dark:block h-60 md:h-100 mx-auto" />
+      <div className="mx-15">
+        <div className="flow-root">
+          <h1 className="float-left font-bold">Texas A&M University</h1>
+          <h1 className="float-right">2017 - 2021</h1>
+        </div>
+        <h1 className="text-left italic">Electrical Engineering Major</h1>
+        <h1 className="text-left italic">Computer Science Minor</h1>
+        
+      </div>
       
     </div>
   )
