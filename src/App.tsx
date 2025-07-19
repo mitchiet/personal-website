@@ -199,7 +199,7 @@ function App() {
 
         {/* Main section */}
         <main className="flex flex-1 flex-col isolate lg:min-w-0 lg:pl-64 py-3">
-          <div className="px-6 lg:px-10 pt-4 h-[calc(100dvh_-_6.5rem)] overflow-y-scroll scrollbar scroll-pt-4">
+          <div className="px-6 lg:px-10 pt-4 h-[calc(100dvh_-_6.5rem)] overflow-y-scroll overflow-x-clip scrollbar scroll-pt-4">
             <div className="mx-auto max-w-7xl">
               <IntroductionSection ref={introductionSectionRef} />
               <br/><br/><br/><br/>
