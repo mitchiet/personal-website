@@ -53,7 +53,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="mx-15">
+          <div className="mx-5 sm:mx-15">
             <div className="flow-root">
               <h1 className="float-left font-bold">L3Harris</h1>
               <h1 className="float-right">2020 - Present</h1>
@@ -63,7 +63,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="mx-15">
+          <div className="mx-5 sm:mx-15">
             <div className="flow-root">
               <h1 className="float-left font-bold">Minigrip</h1>
               <h1 className="float-right">2019</h1>
