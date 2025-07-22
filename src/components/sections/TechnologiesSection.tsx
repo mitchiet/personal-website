@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ReactDOM from 'react-dom'
 
 import { Badge } from '../tailwind-catalyst/badge'
 import { Dropdown, DropdownButton, DropdownMenu } from '../tailwind-catalyst/dropdown'
@@ -313,14 +314,19 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
 
       </div>
 
-      <AltiumDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
-          isOpen={isAltiumDialogOpen} isOpenSetter={setIsAltiumDialogOpen} isESP32DialogOpenSetter={setIsESP32DialogOpen} />
-      <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
-          isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
-      <LaTeXDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
-          isOpen={isLaTeXDialogOpen} isOpenSetter={setIsLaTeXDialogOpen} />
-      <TailwindCSSDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
-          isOpen={isTailwindCSSDialogOpen} isOpenSetter={setIsTailwindCSSDialogOpen} />
+      {ReactDOM.createPortal(
+        <div>
+          <AltiumDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+              isOpen={isAltiumDialogOpen} isOpenSetter={setIsAltiumDialogOpen} isESP32DialogOpenSetter={setIsESP32DialogOpen} />
+          <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+              isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
+          <LaTeXDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+              isOpen={isLaTeXDialogOpen} isOpenSetter={setIsLaTeXDialogOpen} />
+          <TailwindCSSDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+              isOpen={isTailwindCSSDialogOpen} isOpenSetter={setIsTailwindCSSDialogOpen} />
+        </div>,
+        document.body
+      )}
     </div>
   )
 }

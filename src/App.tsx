@@ -61,24 +61,6 @@ function App() {
 
     // Listen for changes to system theme
     darkModePreference.addEventListener("change", applyTheme);
-
-    // Remove the inertness any time a catalyst dialog has set a focus trap
-    const callback = (mutationsList: any) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'inert') {
-          // The inert attribute has changed!
-          const targetElement = mutation.target;
-          if(targetElement.hasAttribute('inert'))
-            targetElement.inert = false;
-        }
-      }
-    };
-    const observer = new MutationObserver(callback);
-    const config = { attributes: true };
-    const targetElement = document.getElementById('root'); // Replace with your element's ID
-    if (targetElement)
-      observer.observe(targetElement, config);
-  
   }, []);
 
   const toggleDarkMode = () => {
