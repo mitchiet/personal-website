@@ -7,6 +7,7 @@ import { Heading } from '../tailwind-catalyst/heading'
 
 import AltiumDialog from '../dialogs/AltiumDialog'
 import ESP32Dialog from '../dialogs/ESP32Dialog'
+import JavaDialog from '../dialogs/JavaDialog'
 import LaTeXDialog from '../dialogs/LaTeXDialog'
 import TailwindCSSDialog from '../dialogs/TailwindCSSDialog'
 
@@ -66,6 +67,7 @@ interface TechnologiesSectionProps {
 function TechnologiesSection({ ref }: TechnologiesSectionProps) {
   let [isAltiumDialogOpen, setIsAltiumDialogOpen] = useState(false)
   let [isESP32DialogOpen, setIsESP32DialogOpen] = useState(false)
+  let [isJavaDialogOpen, setIsJavaDialogOpen] = useState(false)
   let [isLaTeXDialogOpen, setIsLaTeXDialogOpen] = useState(false)
   let [isTailwindCSSDialogOpen, setIsTailwindCSSDialogOpen] = useState(false)
 
@@ -85,7 +87,11 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><CIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><PythonIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><MATLABIcon className="tech-icon" /></div>
-              <div className="tech-icon-container"><JavaIcon className="tech-icon" /></div>
+              <div className="tech-icon-container">
+                <button onClick={() => setIsJavaDialogOpen(true)} className="tech-more-info rose-shadow">
+                  <JavaIcon className="tech-icon" />
+                </button>
+              </div>
               <div className="tech-icon-container"><VerilogIcon className="tech-icon" /></div>
             </div>
           </div>
@@ -320,6 +326,8 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               isOpen={isAltiumDialogOpen} isOpenSetter={setIsAltiumDialogOpen} isESP32DialogOpenSetter={setIsESP32DialogOpen} />
           <ESP32Dialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
               isOpen={isESP32DialogOpen} isOpenSetter={setIsESP32DialogOpen} />
+          <JavaDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
+              isOpen={isJavaDialogOpen} isOpenSetter={setIsJavaDialogOpen} />
           <LaTeXDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
               isOpen={isLaTeXDialogOpen} isOpenSetter={setIsLaTeXDialogOpen} />
           <TailwindCSSDialog className="absolute flex flex-col rounded-3xl inset-x-0 mx-auto top-26 max-h-[80vh] min-h-50 max-w-5/6 sm:max-w-lg"
