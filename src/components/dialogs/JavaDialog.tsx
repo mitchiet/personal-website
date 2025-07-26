@@ -26,7 +26,7 @@ function JavaDialog(props:any) {
         </Field>
         <br/>
         <Field>
-          <div className="w-[90%] mx-auto aspect-[9/7.8]">
+          <div className="w-[90%] mx-auto aspect-square">
             <img className="rounded-xl border-2"
                 src={chessPic}
                 alt="Virtual Chess Pic"
