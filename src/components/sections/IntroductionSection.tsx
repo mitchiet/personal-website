@@ -80,6 +80,12 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         <Heading>Introduction</Heading>
       </div>
       <br/>
+      <p className="mx-5 sm:mx-15">
+        Hello! My name is Mitchell Taylor, and you have landed on my personal website.
+        This site serves as an interactive résumé showcasing some of my skills and personality.
+        Take a look around!
+      </p>
+      <br/><br/>
       <div>
          {swiperContent}
       </div>
