@@ -12,10 +12,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import pic1 from '../../assets/images/lincoln-memorial.png';
-import pic2 from '../../assets/images/foo-fighters.png';
+import pic2 from '../../assets/images/hiking.png';
 import pic3 from '../../assets/images/suarez.png';
 import pic4 from '../../assets/images/volunteer-football.png';
-import pic5 from '../../assets/images/coffee.png';
+import pic5 from '../../assets/images/concert.png';
 
 const images = [pic1, pic2, pic3, pic4, pic5];
 
