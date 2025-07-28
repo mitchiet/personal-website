@@ -29,7 +29,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
             rows: 2,
             fill: "row"
           }}
-          spaceBetween={50}
+          spaceBetween={100}
           navigation
           pagination={{
             clickable: true,
