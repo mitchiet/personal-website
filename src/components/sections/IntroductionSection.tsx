@@ -40,7 +40,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
   const swiperContent = useMemo(() => (
     <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
-        className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)] overflow-visible"
+        className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)]"
         virtual={false}
         watchSlidesProgress
         slidesPerView="auto"
