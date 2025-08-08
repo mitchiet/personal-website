@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { Heading } from '../tailwind-catalyst/heading'
 
@@ -24,55 +24,35 @@ interface IntroductionSectionProps {
 }
 
 function IntroductionSection({ ref }: IntroductionSectionProps) {
-
+  const [allLoaded, setAllLoaded] = useState(false);
   const swiperRef = useRef<SwiperCore>(null);
-  const totalImages = 5; // Update if you add/remove slides
-  const loadedCount = useRef(0);
 
-  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.classList.add('loaded')
-    loadedCount.current += 1;
-    if (loadedCount.current === totalImages) {
-      swiperRef.current?.update();
-    }
-  };
+  const preloadAndDecode = (src: string): Promise<void> => 
+    new Promise((resolve) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = async () => {
+        try {
+          if (img.decode) {
+            await img.decode();
+          }
+        } catch {
+          // Ignore decoding errors
+        } finally {
+          resolve();
+        }
+      };
+      img.onerror = () => resolve();
+    });
 
-  const swiperContent = useMemo(() => (
-    <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)]"
-        virtual={false}
-        watchSlidesProgress
-        slidesPerView="auto"
-        effect={'coverflow'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false
-        }}
-        spaceBetween={30}
-        centeredSlides
-        freeMode
-        navigation
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
-      {images.map((src, index) => (
-        <SwiperSlide key={index} className="!w-auto overflow-visible">
-          <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block [backface-visibility:hidden] [transform-style:preserve-3d]"
-            src={src}
-            loading="eager"
-            alt={`Slide ${index}`}
-            onLoad={handleImageLoad}
-            onError={handleImageLoad}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  ), [images]); // Only re-run if `images` changes
+  useEffect(() => {
+    const loadImages = async () => {
+      await Promise.all(images.map(preloadAndDecode));
+      if (swiperRef.current) swiperRef.current.update();
+      setAllLoaded(true);
+    };
+    loadImages();
+  }, []);
 
   return (
     <div ref={ref}>
@@ -87,7 +67,44 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
       </p>
       <br/><br/>
       <div>
-         {swiperContent}
+        {!allLoaded && (
+        <div className="flex justify-center items-center h-[48dvh] md:h-[64dvh]">
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+        </div>
+      )}
+        {allLoaded && (
+        <Swiper
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)]"
+            virtual={false}
+            watchSlidesProgress
+            slidesPerView='auto'
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false
+            }}
+            spaceBetween={30}
+            centeredSlides
+            freeMode
+            navigation
+            pagination={{
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
+          {images.map((src, index) => (
+            <SwiperSlide key={index} className="!w-auto overflow-visible will-change-transform [transform:translateZ(0)]">
+              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block loaded [backface-visibility:hidden] [transform-style:preserve-3d] will-change-transform [transform:translateZ(0)]"
+                src={src}
+                loading="eager"
+                alt={`Slide ${index}`}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>)}
       </div>
     </div>
   )
