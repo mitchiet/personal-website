@@ -17,6 +17,7 @@ import CPPIcon from '../../assets/logos/technologies/cpp3-svgrepo-com.svg?react'
 import CIcon from '../../assets/logos/technologies/c3-svgrepo-com.svg?react';
 import MATLABIcon from '../../assets/logos/technologies/matlab-svgrepo-com.svg?react';
 import PythonIcon from '../../assets/logos/technologies/python-svgrepo-com.svg?react';
+import BashIcon from '../../assets/logos/technologies/bash-icon-svgrepo-com.svg?react';
 import JavaIcon from '../../assets/logos/technologies/java-svgrepo-com.svg?react';
 import VerilogIcon from '../../assets/logos/technologies/verilog-svgrepo-com.svg?react';
 
@@ -86,6 +87,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><CPPIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><CIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><PythonIcon className="tech-icon" /></div>
+              <div className="tech-icon-container"><BashIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><MATLABIcon className="tech-icon" /></div>
               <div className="tech-icon-container">
                 <button onClick={() => setIsJavaDialogOpen(true)} className="tech-more-info rose-shadow">
@@ -108,6 +110,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                     <Badge color="rose">C++</Badge>
                     <Badge color="rose">C</Badge>
                     <Badge color="rose">Python</Badge>
+                    <Badge color="rose">Bash</Badge>
                     <Badge color="rose">MATLAB</Badge>
                     <Badge color="rose">Java</Badge>
                     <Badge color="rose">Verilog</Badge>
