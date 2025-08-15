@@ -77,6 +77,37 @@ canvas.visible {
   @apply overflow-y-visible overflow-x-clip
 }
 
+/* Default fallback using vh */
+.intro-swiper {
+  @apply h-[48vh] md:h-[64vh]
+}
+/* Override if dvh is supported */
+@supports (height: 48dvh) {
+  .intro-swiper {
+    @apply h-[48dvh] md:h-[64dvh]
+  }
+}
+/* Default fallback using vh */
+.intro-swiper-slide {
+  @apply h-[40vh] md:h-[55vh]
+}
+/* Override if dvh is supported */
+@supports (height: 40dvh) {
+  .intro-swiper-slide {
+    @apply h-[40dvh] md:h-[55dvh]
+  }
+}
+
+/* Default fallback using vh */
+.scrollable-main {
+  @apply max-h-[calc(100vh-6.5rem)]
+}
+/* Override if dvh is supported */
+@supports (height: 100dvh) {
+  .scrollable-main {
+    @apply max-h-[calc(100dvh-6.5rem)]
+  }
+}
 
 .tech-icon {
     @apply size-12 md:size-14 pb-2

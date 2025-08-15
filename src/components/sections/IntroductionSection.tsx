@@ -68,14 +68,14 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
       <br/><br/>
       <div>
         {!allLoaded && (
-        <div className="flex justify-center items-center h-[48dvh] md:h-[64dvh]">
+        <div className="flex justify-center items-center intro-swiper">
           <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
         </div>
       )}
         {allLoaded && (
         <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            className="relative h-[48dvh] md:h-[64dvh] will-change-transform [transform:translateZ(0)]"
+            className="relative intro-swiper will-change-transform [transform:translateZ(0)]"
             virtual={false}
             watchSlidesProgress
             slidesPerView='auto'
@@ -97,7 +97,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
             modules={[EffectCoverflow, FreeMode, Navigation, Pagination]}>
           {images.map((src, index) => (
             <SwiperSlide key={index} className="!w-auto overflow-visible will-change-transform [transform:translateZ(0)]">
-              <img className="rounded-xl border-2 h-[40dvh] md:h-[55dvh] w-auto object-cover block loaded [backface-visibility:hidden] [transform-style:preserve-3d] will-change-transform [transform:translateZ(0)]"
+              <img className="rounded-xl border-2 intro-swiper-slide w-auto object-cover block loaded [backface-visibility:hidden] [transform-style:preserve-3d] will-change-transform [transform:translateZ(0)]"
                 src={src}
                 loading="eager"
                 alt={`Slide ${index}`}
