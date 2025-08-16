@@ -11,6 +11,8 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import LoadingSpinner from '../LoadingSpinner';
+
 import pic1 from '../../assets/images/lincoln-memorial.jpg';
 import pic2 from '../../assets/images/hiking.jpg';
 import pic3 from '../../assets/images/suarez.jpg';
@@ -67,11 +69,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
       </p>
       <br/><br/>
       <div>
-        {!allLoaded && (
-        <div className="flex justify-center items-center intro-swiper">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
-      )}
+        {!allLoaded && (<LoadingSpinner />)}
         {allLoaded && (
         <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
