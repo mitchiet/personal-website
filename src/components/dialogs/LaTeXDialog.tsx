@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 import PDFViewer from '../PDFViewer';
 
-import resume from '../../assets/mitchell_taylor_resume.pdf';
+import resume from '/mitchell_taylor_resume.pdf';
 
 function LaTeXDialog(props:any) {
 

@@ -9,7 +9,7 @@ import GitHubDarkLogo from '../../assets/logos/GitHub_Logo_White.png';
 import GitHubMarkDarkLogo from '../../assets/logos/github-mark-white.png';
 import LinkedInLogo from '../../assets/logos/LI-Logo.png';
 
-import resume from '../../assets/mitchell_taylor_resume.pdf';
+import resume from '/mitchell_taylor_resume.pdf';
 
 interface ProfilesSectionProps {
     ref?: React.Ref<HTMLDivElement>;
