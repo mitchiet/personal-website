@@ -1,45 +1,14 @@
-import { useEffect, useState } from 'react';
-
 import { Button } from '../tailwind-catalyst/button'
 import { Dialog, DialogBody, DialogTitle } from '../tailwind-catalyst/dialog'
 import { Field } from '../tailwind-catalyst/fieldset'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types';
 
-import LoadingSpinner from '../LoadingSpinner';
+import ImageWithSpinner from '../ImageWithSpinner';
 
 import pic from '../../assets/images/esp32.jpg';
 
 function ESP32Dialog(props: any) {
-  const [picLoaded, setPicLoaded] = useState(false);
-
-  const preloadAndDecode = (src: string): Promise<void> => 
-    new Promise((resolve) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = async () => {
-        try {
-          if (img.decode) {
-            await img.decode();
-          }
-        } catch {
-          // Ignore decoding errors
-        } finally {
-          resolve();
-        }
-      };
-      img.onerror = () => resolve();
-    });
-
-  useEffect(() => {
-    const loadPic = async () => {
-      await preloadAndDecode(pic);
-      setPicLoaded(true);
-    };
-
-    loadPic();
-  }, []);
-
   return (
     <Dialog open={props.isOpen} onClose={() => {}} className={props.className}>
       <DialogTitle className="inline-flex items-center border-b-2 border-zinc-950/10 pb-4 dark:border-white/10 w-full">
@@ -61,12 +30,11 @@ function ESP32Dialog(props: any) {
         <br/>
         <Field>
           <div className="w-[90%] mx-auto aspect-[2.6/2.3]">
-            {!picLoaded && (<LoadingSpinner />)}
-            {picLoaded && (<img className="rounded-xl border-2"
-                src={pic}
-                alt="Senior Design Control Unit"
-                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-            />)}
+            <ImageWithSpinner 
+              src={pic}
+              alt="Senior Design Control Unit"
+              className="rounded-xl border-2"
+            />
           </div>
         </Field>
         <br/>

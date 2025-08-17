@@ -1,53 +1,15 @@
-import { useEffect, useState } from 'react';
-
 import { Button } from '../tailwind-catalyst/button'
 import { Dialog, DialogBody, DialogTitle } from '../tailwind-catalyst/dialog'
 import { Field } from '../tailwind-catalyst/fieldset'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types';
 
-import LoadingSpinner from '../LoadingSpinner';
+import ImageWithSpinner from '../ImageWithSpinner';
 
 import pcbPic from '../../assets/images/pcb.png';
 import pcb3DPic from '../../assets/images/pcb_3d.jpg';
 
 function AltiumDialog(props: any) {
-  const [pcbLoaded, setPcbLoaded] = useState(false);
-  const [pcb3DLoaded, setPcb3DLoaded] = useState(false);
-
-  const preloadAndDecode = (src: string): Promise<void> => 
-    new Promise((resolve) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = async () => {
-        try {
-          if (img.decode) {
-            await img.decode();
-          }
-        } catch {
-          // Ignore decoding errors
-        } finally {
-          resolve();
-        }
-      };
-      img.onerror = () => resolve();
-    });
-
-  useEffect(() => {
-    const loadPcbPic = async () => {
-      await preloadAndDecode(pcbPic);
-      setPcbLoaded(true);
-    };
-
-    const loadPcb3DPic = async () => {
-      await preloadAndDecode(pcb3DPic);
-      setPcb3DLoaded(true);
-    };
-
-    loadPcbPic();
-    loadPcb3DPic();
-  }, []);
-
   return (
     <Dialog open={props.isOpen} onClose={() => {}} className={props.className}>
       <DialogTitle className="inline-flex items-center border-b-2 border-zinc-950/10 pb-4 dark:border-white/10 w-full">
@@ -66,12 +28,11 @@ function AltiumDialog(props: any) {
         <br/>
         <Field>
           <div className="w-[90%] mx-auto aspect-[9/7.8]">
-            {!pcbLoaded && (<LoadingSpinner />)}
-            {pcbLoaded && (<img className="rounded-xl border-2"
-                src={pcbPic}
-                alt="PCB Design"
-                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-            />)}
+            <ImageWithSpinner 
+              src={pcbPic}
+              alt="PCB Design"
+              className="rounded-xl border-2"
+            />
           </div>
         </Field>
         <br/>
@@ -90,12 +51,11 @@ function AltiumDialog(props: any) {
          <br/>
         <Field>
           <div className="w-[90%] mx-auto aspect-[5/4]">
-            {!pcb3DLoaded && (<LoadingSpinner />)}
-            {pcb3DLoaded && (<img className="rounded-xl border-2"
-                src={pcb3DPic}
-                alt="3D PCB View"
-                onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
-            />)}
+            <ImageWithSpinner 
+              src={pcb3DPic}
+              alt="3D PCB View"
+              className="rounded-xl border-2"
+            />
           </div>
         </Field>
       </DialogBody>

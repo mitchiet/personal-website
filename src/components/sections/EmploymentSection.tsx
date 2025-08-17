@@ -7,10 +7,11 @@ import "swiper/css/grid";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import ImageWithSpinner from '../ImageWithSpinner';
+
 import L3HarrisLogo from '../../assets/logos/l3harris.svg?react';
 import L3HarrisDarkLogo from '../../assets/logos/l3harris-dark.svg?react';
 import minigripLogo from '../../assets/logos/minigrip.png';
-
 
 interface EmploymentSectionProps {
     ref?: React.Ref<HTMLDivElement>;
@@ -44,10 +45,10 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
         <SwiperSlide>
           <div className="flex items-center justify-center">
             <div className="w-7/10">
-              <img className="dark:bg-white rounded-xl mx-auto"
-                  src={minigripLogo}
-                  alt="Minigrip"
-                  onLoad={(e: React.SyntheticEvent<HTMLImageElement>) => e.currentTarget.classList.add('loaded')}
+              <ImageWithSpinner 
+                src={minigripLogo}
+                alt="Minigrip"
+                className="dark:bg-white rounded-xl mx-auto"
               />
             </div>
           </div>
