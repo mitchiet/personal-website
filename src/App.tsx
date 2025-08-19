@@ -123,7 +123,7 @@ function App() {
       <div className="top-[5rem] flex max-lg:flex-col relative min-h-svh w-full">
 
         {/* Desktop Sidebar */}
-        <div className="fixed inset-y-0 left-0 top-[5rem] w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10 lg:bg-zinc-100 dark:lg:bg-zinc-950">
+        <div className="side-bar fixed inset-y-0 left-0 top-[5rem] w-64 max-lg:hidden z-50 border-r-2 border-zinc-950/10 dark:border-white/10">
           <Sidebar>
             <div className="p-4">
                <Button plain className="cursor-pointer w-full justify-end !text-2xl" onClick={() => scrollToElementRef(introductionSectionRef)}>
@@ -154,13 +154,13 @@ function App() {
         <Headless.Dialog open={showSidebar} onClose={() => setShowSidebar(false)} className="lg:hidden">
           <Headless.DialogBackdrop
             transition
-            className="fixed inset-0 bg-black/30 transition data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+            className="fixed inset-0 transition data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
           />
           <Headless.DialogPanel
             transition
             className="fixed z-100 inset-y-0 w-full max-w-80 p-2 transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
-            <div className="flex h-full flex-col rounded-lg bg-white shadow-xs ring-1 ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10">
+            <div className="flex side-bar h-full flex-col rounded-lg shadow-xs ring-1 ring-zinc-950/5 dark:ring-white/10">
               <div className="mb-3 px-4 pt-3">
                 <Button plain className="float-end cursor-pointer" onClick={() => setShowSidebar(false)}>
                   <ArrowLeftIcon />
