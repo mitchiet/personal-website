@@ -3,10 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  background-color: var(--tw-bg, #ffffff); /* fallback for light */
+  background-color: #ffffff; /* fallback for light */
 }
-html.dark {
-  background-color: var(--tw-bg, #18181b); /* fallback for dark */
+html:where(.dark, .dark *) {
+  background-color: #18181b; /* fallback for dark */
 }
 html {
     @apply text-zinc-950 dark:text-white
@@ -43,10 +43,10 @@ canvas.visible {
 }
 
 #main-nav {
-  background-color: var(--tw-bg, #f4f4f5); /* fallback for light */
+  background-color: #f4f4f5; /* fallback for light */
 }
-#main-nav.dark {
-  background-color: var(--tw-bg, #09090b); /* fallback for dark */
+#main-nav:where(.dark, .dark *) {
+  background-color: #09090b; /* fallback for dark */
 }
 #main-nav {
     @apply text-zinc-950 dark:text-white
@@ -57,10 +57,10 @@ canvas.visible {
 }
 
 .side-bar {
-  background-color: var(--tw-bg, #f4f4f5); /* fallback for light */
+  background-color: #f4f4f5; /* fallback for light */
 }
-.side-bar.dark {
-  background-color: var(--tw-bg, #09090b); /* fallback for dark */
+.side-bar:where(.dark, .dark *) {
+  background-color: #09090b; /* fallback for dark */
 }
 .side-bar {
     @apply !bg-zinc-100 dark:!bg-zinc-950
