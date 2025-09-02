@@ -3,14 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  background-color: #ffffff; /* fallback for light */
+  background-color: #ffffff; /* bg-white */
 }
 html:where(.dark, .dark *) {
-  background-color: #18181b; /* fallback for dark */
+  background-color: #18181b; /* bg-zinc-900 */
 }
 html {
     @apply text-zinc-950 dark:text-white
-        !bg-white ring-zinc-950/5 dark:!bg-zinc-900 dark:ring-white/10
+      ring-zinc-950/5 dark:ring-white/10
         !overflow-y-clip
 }
 
@@ -43,27 +43,23 @@ canvas.visible {
 }
 
 #main-nav {
-  background-color: #f4f4f5; /* fallback for light */
+  background-color: #f4f4f5; /* bg-zinc-100 */
 }
 #main-nav:where(.dark, .dark *) {
-  background-color: #09090b; /* fallback for dark */
+  background-color: #09090b; /* bg-zinc-950 */
 }
 #main-nav {
     @apply text-zinc-950 dark:text-white
         ring-zinc-950/5 dark:ring-white/10
-        !bg-zinc-100 dark:!bg-zinc-950
         fixed top-0 left-0 right-0 z-100 opacity-100 border-double border-b-4
         h-[5rem]
 }
 
 .side-bar {
-  background-color: #f4f4f5; /* fallback for light */
+  background-color: #f4f4f5; /* bg-zinc-100 */
 }
 .side-bar:where(.dark, .dark *) {
-  background-color: #09090b; /* fallback for dark */
-}
-.side-bar {
-    @apply !bg-zinc-100 dark:!bg-zinc-950
+  background-color: #09090b; /* bg-zinc-950 */
 }
 
 .link {
@@ -94,16 +90,19 @@ canvas.visible {
 }
 
 .swiper-wrapper {
-    @apply items-center pb-10 overflow-visible
+  @apply items-center pb-10 overflow-visible
 }
 .swiper-pagination-bullet {
-    @apply bg-black dark:bg-white
+  background-color: #000000; /* bg-black */
+}
+.swiper-pagination-bullet:where(.dark, .dark *) {
+  background-color: #ffffff; /* bg-white */
 }
 .swiper-button-prev {
-    @apply text-black dark:text-white
+  @apply text-black dark:text-white
 }
 .swiper-button-next {
-    @apply text-black dark:text-white
+  @apply text-black dark:text-white
 }
 .swiper {
   @apply overflow-y-visible overflow-x-clip
