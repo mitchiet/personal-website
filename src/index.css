@@ -157,25 +157,39 @@ canvas.visible {
     @apply mx-auto my-3
 }
 .tech-more-info {
-    @apply cursor-pointer
-    border-double border-b-0
-    shadow-[0_8px_5px_-6px_theme(colors.black)]
-    dark:shadow-[0_8px_5px_-6px_theme(colors.white)]
+  cursor: pointer; /* cursor-pointer */
+  border-style: double; /* border-double */
+  border-bottom: 0; /* border-b-0 */
+  box-shadow: 0 8px 5px -6px #000000; /* shadow-[...] black */
+}
+.tech-more-info:where(.dark, .dark *) {
+  box-shadow: 0 8px 5px -6px #ffffff; /* shadow-[...] white */
 }
 
-.orange-shadow {
-    @apply hover:shadow-[0_8px_5px_-6px_theme(colors.orange.500)]
-    active:shadow-[0_8px_5px_-6px_theme(colors.orange.500)]
+.orange-shadow:hover {
+  box-shadow: 0 8px 5px -6px #f97316; /* hover:shadow-[...] bg-orange-500 (#f97316) */
 }
-.pink-shadow {
-    @apply hover:shadow-[0_8px_5px_-6px_theme(colors.pink.500)]
-    active:shadow-[0_8px_5px_-6px_theme(colors.pink.500)]
+.orange-shadow:active {
+  box-shadow: 0 8px 5px -6px #f97316; /* active:shadow-[...] bg-orange-500 (#f97316) */
 }
-.purple-shadow {
-    @apply hover:shadow-[0_8px_5px_-6px_theme(colors.purple.500)]
-    active:shadow-[0_8px_5px_-6px_theme(colors.purple.500)]
+
+.pink-shadow:hover {
+  box-shadow: 0 8px 5px -6px #ec4899; /* hover:shadow-[...] bg-pink-500 (#ec4899) */
 }
-.rose-shadow {
-    @apply hover:shadow-[0_8px_5px_-6px_theme(colors.rose.500)]
-    active:shadow-[0_8px_5px_-6px_theme(colors.rose.500)]
+.pink-shadow:active {
+  box-shadow: 0 8px 5px -6px #ec4899; /* active:shadow-[...] bg-pink-500 (#ec4899) */
+}
+
+.purple-shadow:hover {
+  box-shadow: 0 8px 5px -6px #a855f7; /* hover:shadow-[...] bg-purple-500 (#a855f7) */
+}
+.purple-shadow:active {
+  box-shadow: 0 8px 5px -6px #a855f7; /* active:shadow-[...] bg-purple-500 (#a855f7) */
+}
+
+.rose-shadow:hover {
+  box-shadow: 0 8px 5px -6px #f43f5e; /* hover:shadow-[...] bg-rose-500 (#f43f5e) */
+}
+.rose-shadow:active {
+  box-shadow: 0 8px 5px -6px #f43f5e; /* active:shadow-[...] bg-rose-500 (#f43f5e) */
 }
