@@ -68,15 +68,25 @@ canvas.visible {
         text-blue-600 dark:text-blue-300
 }
 
-.scrollbar {
-    @apply [&::-webkit-scrollbar]:w-2
-        [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-track]:bg-gray-100
-        [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-gray-300
-        dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-        dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+.scrollbar::-webkit-scrollbar {
+  width: 0.5rem; /* w-2 */
 }
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 9999px; /* rounded-full */
+  background-color: #f3f4f6; /* bg-gray-100 */
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 9999px; /* rounded-full */
+  background-color: #d1d5db; /* bg-gray-300 */
+}
+/* Dark mode overrides (when <html> has class="dark") */
+.dark .scrollbar::-webkit-scrollbar-track {
+  background-color: #404040; /* bg-neutral-700 */
+}
+.dark .scrollbar::-webkit-scrollbar-thumb {
+  background-color: #737373; /* bg-neutral-500 */
+}
+
 
 /* Non-webkit only styles */
 @supports not (-webkit-appearance: none) {
