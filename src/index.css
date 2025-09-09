@@ -62,6 +62,14 @@ canvas.visible {
   background-color: #09090b; /* bg-zinc-950 */
 }
 
+.modal {
+   background-color: #ffffff; /* bg-white */
+}
+.modal:where(.dark, .dark *) {
+  background-color: #18181b; /* bg-zinc-900 */
+}
+
+
 .link {
     @apply no-underline hover:underline active:underline
         cursor-pointer
