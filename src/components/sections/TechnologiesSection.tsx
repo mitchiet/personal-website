@@ -105,7 +105,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="rose">C++</Badge>
                     <Badge color="rose">C</Badge>
@@ -148,7 +148,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="purple">Javascript</Badge>
                     <Badge color="purple">Typescript</Badge>
@@ -188,7 +188,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="sky">Git</Badge>
                     <Badge color="sky">Subversion (SVN)</Badge>
@@ -236,7 +236,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="orange">Xilinx Vivado</Badge>
                     <Badge color="orange">LabVIEW</Badge>
@@ -268,7 +268,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="green">MongoDB</Badge>
                     <Badge color="green">MySQL</Badge>
@@ -305,7 +305,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
                   More
                   {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
                 </DropdownButton>
-                <DropdownMenu modal={false} anchor="bottom">
+                <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
                     <Badge color="pink">Red Hat Enterprise Linux</Badge>
                     <Badge color="pink">Rocky Linux</Badge>
