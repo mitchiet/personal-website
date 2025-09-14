@@ -101,9 +101,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="rose" className="cursor-pointer m-2 flex-1">
+                    className="tech-button rose-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
@@ -144,9 +144,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="purple" className="cursor-pointer m-2 flex-1">
+                    className="tech-button purple-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
@@ -184,9 +184,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="sky" className="cursor-pointer m-2 flex-1">
+                    className="tech-button sky-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
@@ -232,9 +232,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="orange" className="cursor-pointer m-2 flex-1">
+                    className="tech-button orange-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
@@ -264,9 +264,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="green" className="cursor-pointer m-2 flex-1">
+                    className="tech-button green-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">
@@ -301,9 +301,9 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
             {({ open: outerOpen }) => (
               <div className="relative w-full flex">
                 <DropdownButton
-                    color="pink" className="cursor-pointer m-2 flex-1">
+                    className="tech-button pink-bg cursor-pointer m-2 flex-1">
                   More
-                  {outerOpen ? (<ChevronUpIcon />) : (<ChevronDownIcon />)}
+                  {outerOpen ? (<ChevronUpIcon className="fill-white"/>) : (<ChevronDownIcon className="fill-white"/>)}
                 </DropdownButton>
                 <DropdownMenu modal={false} className="modal" anchor="bottom">
                   <div className="flex flex-wrap gap-2 m-2 w-50 xl:w-70">

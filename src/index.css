@@ -180,12 +180,18 @@ canvas.visible {
 .orange-shadow:active {
   box-shadow: 0 8px 5px -6px #f97316; /* active:shadow-[...] bg-orange-500 (#f97316) */
 }
+.orange-bg {
+  background-color: #f97316; /* bg-orange-500 */
+}
 
 .pink-shadow:hover {
   box-shadow: 0 8px 5px -6px #ec4899; /* hover:shadow-[...] bg-pink-500 (#ec4899) */
 }
 .pink-shadow:active {
   box-shadow: 0 8px 5px -6px #ec4899; /* active:shadow-[...] bg-pink-500 (#ec4899) */
+}
+.pink-bg {
+  background-color: #ec4899; /* bg-pink-500 */
 }
 
 .purple-shadow:hover {
@@ -194,10 +200,40 @@ canvas.visible {
 .purple-shadow:active {
   box-shadow: 0 8px 5px -6px #a855f7; /* active:shadow-[...] bg-purple-500 (#a855f7) */
 }
+.purple-bg {
+  background-color: #a855f7; /* bg-purple-500 */
+}
 
 .rose-shadow:hover {
   box-shadow: 0 8px 5px -6px #f43f5e; /* hover:shadow-[...] bg-rose-500 (#f43f5e) */
 }
 .rose-shadow:active {
   box-shadow: 0 8px 5px -6px #f43f5e; /* active:shadow-[...] bg-rose-500 (#f43f5e) */
+}
+.rose-bg {
+  background-color: #f43f5e; /* bg-rose-500 */
+}
+
+.green-shadow:hover {
+  box-shadow: 0 8px 5px -6px #22c55e; /* hover:shadow-[...] bg-green-500 (#22c55e) */
+}
+.green-shadow:active {
+  box-shadow: 0 8px 5px -6px #22c55e; /* active:shadow-[...] bg-green-500 (#22c55e) */
+}
+.green-bg {
+  background-color: #22c55e; /* bg-green-500 */
+}
+
+.sky-shadow:hover {
+  box-shadow: 0 8px 5px -6px #0ea5e9; /* hover:shadow-[...] bg-sky-500 (#0ea5e9) */
+}
+.sky-shadow:active {
+  box-shadow: 0 8px 5px -6px #0ea5e9; /* active:shadow-[...] bg-sky-500 (#0ea5e9) */
+}
+.sky-bg {
+  background-color: #0ea5e9; /* bg-sky-500 */
+}
+
+.tech-button::before {
+  background-color: inherit;
 }
