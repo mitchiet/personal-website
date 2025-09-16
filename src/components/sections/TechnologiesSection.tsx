@@ -217,7 +217,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               </div>
               <div className="tech-icon-container">
                 <button onClick={() => setIsAltiumDialogOpen(true)} className="tech-more-info orange-shadow">
-                  <AltiumIcon className="tech-icon invert dark:filter-none" />
+                  <AltiumIcon className="tech-icon text-black dark:text-white" />
                 </button>
               </div>
               <div className="tech-icon-container">
@@ -288,7 +288,7 @@ function TechnologiesSection({ ref }: TechnologiesSectionProps) {
               <div className="tech-icon-container"><RockyIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><CentosIcon className="tech-icon" /></div>
               <div className="tech-icon-container"><WindowsIcon className="tech-icon" /></div>
-              <div className="tech-icon-container"><AppleIcon className="tech-icon dark:invert" /></div>
+              <div className="tech-icon-container"><AppleIcon className="tech-icon text-black dark:text-white" /></div>
               <div className="tech-icon-container"><DigilentIcon className="tech-icon" /></div>
               <div className="tech-icon-container">
                 <button onClick={() => setIsESP32DialogOpen(true)} className="tech-more-info pink-shadow">
