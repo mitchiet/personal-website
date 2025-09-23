@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { GlobalWorkerOptions, getDocument } from 'pdfjs-dist';
+import { getDocument } from 'pdfjs-dist';
 import 'pdfjs-dist/build/pdf.worker.mjs';
 import type { PDFDocumentProxy } from 'pdfjs-dist';
 
@@ -40,13 +40,9 @@ const PDFViewer: React.FC<PDFViewerProps> = (props) => {
   useEffect(() => {
     if (!containerWidth) return;
 
-    const loadPdf = async () => {
-      GlobalWorkerOptions.workerSrc = new URL(
-        'pdfjs-dist/build/pdf.worker.mjs',
-        import.meta.url
-      ).toString();
+    const loadPdf = async (url: string) => {
 
-      const loadingTask = getDocument(props.file);
+      const loadingTask = getDocument({ url, disableWorker: true } as any);
       const pdf: PDFDocumentProxy = await loadingTask.promise;
       const page = await pdf.getPage(1);
 
@@ -77,7 +73,7 @@ const PDFViewer: React.FC<PDFViewerProps> = (props) => {
       }).promise;
     };
 
-    loadPdf().catch(console.error);
+    loadPdf(props.file).catch(console.error);
   }, [props.file, containerWidth]);
 
   return (
