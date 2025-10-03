@@ -70,10 +70,10 @@ canvas.visible {
 }
 
 .popover {
-  background-color: rgba(255, 255, 255, 0.75); /* bg-white/75 */
+  background-color: rgba(255, 255, 255, 0.75) !important; /* bg-white/75 */
 }
 .popover:where(.dark, .dark *) {
-  background-color: rgba(39, 39, 42, 0.75); /* dark:bg-zinc-800/75 */
+  background-color: rgba(39, 39, 42, 0.75) !important; /* dark:bg-zinc-800/75 */
 }
 
 .link {
