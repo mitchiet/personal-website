@@ -34,14 +34,6 @@ img.loaded {
   opacity: 1;
 }
 
-canvas {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-canvas.visible {
-  opacity: 1;
-}
-
 #main-nav {
   background-color: #f4f4f5; /* bg-zinc-100 */
 }
