@@ -91,11 +91,12 @@ function App() {
     }
   }, []);
 
-  const toggleDarkMode = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    setDarkMode(isDark);
+  const toggleDarkMode = (val: boolean) => {
+    setDarkMode(val);
+    if (val) document.documentElement.classList.add("dark")
+    else document.documentElement.classList.remove("dark")
     try {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      localStorage.setItem("theme", val ? "dark" : "light");
     } catch (err) {
       console.warn("localStorage unavailable:", err);
     }
