@@ -2,15 +2,13 @@ import { Heading } from '../tailwind-catalyst/heading'
 
 import ImageWithSpinner from '../ImageWithSpinner';
 
-import pic1 from '../../assets/images/headshot.jpg';
-import pic2 from '../../assets/images/headshot-glasses.jpg';
+import pic from '../../assets/images/headshot-glasses.jpg';
 
 interface IntroductionSectionProps {
     ref?: React.Ref<HTMLDivElement>;
-    darkMode?: boolean;
 }
 
-function IntroductionSection({ ref, darkMode }: IntroductionSectionProps) {
+function IntroductionSection({ ref }: IntroductionSectionProps) {
 
   return (
     <div ref={ref}>
@@ -24,9 +22,9 @@ function IntroductionSection({ ref, darkMode }: IntroductionSectionProps) {
         Take a look around!
       </p>
       <br/><br/>
-      <div className="w-[60%] mx-auto">
+      <div className="w-[50%] mx-auto">
         <ImageWithSpinner 
-          src={darkMode? pic1 : pic2}
+          src={pic}
           alt="Senior Design Control Unit"
           className="rounded-xl border-2"
         />
