@@ -26,7 +26,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         <ImageWithSpinner 
           src={pic}
           alt="Senior Design Control Unit"
-          className="rounded-xl border-2"
+          className="rounded-xl border-2 max-h-[50vh]"
         />
       </div>
     </div>
