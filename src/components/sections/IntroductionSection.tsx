@@ -25,7 +25,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
       <div className="w-[50%] mx-auto">
         <ImageWithSpinner 
           src={pic}
-          alt="Senior Design Control Unit"
+          alt="Professional Headshot"
           className="rounded-xl border-2 max-h-[50vh]"
         />
       </div>
