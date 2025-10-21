@@ -4,8 +4,6 @@ import { Button } from './components/tailwind-catalyst/button'
 import { Label } from './components/tailwind-catalyst/fieldset'
 import { Navbar, NavbarSpacer } from './components/tailwind-catalyst/navbar'
 import { Sidebar } from './components/tailwind-catalyst/sidebar'
-import { Switch } from './components/tailwind-catalyst/switch'
-import { useIsSandboxed } from "./components/useIsSandboxed";
 import * as Headless from '@headlessui/react'
 
 import { AcademicCapIcon } from '@heroicons/react/24/solid'
@@ -16,6 +14,8 @@ import { CpuChipIcon } from '@heroicons/react/24/solid'
 import { GlobeAltIcon } from '@heroicons/react/24/solid'
 import { UserIcon } from '@heroicons/react/24/solid'
 
+import Switch from './components/Switch'
+
 import IntroductionSection from './components/sections/IntroductionSection'
 import EmploymentSection from './components/sections/EmploymentSection'
 import EducationSection from "./components/sections/EducationSection"
@@ -24,7 +24,6 @@ import ProfilesSection from './components/sections/ProfilesSection'
 
 function App() {
 
-  const isSandboxed = useIsSandboxed();
   const [darkMode, setDarkMode] = useState(false);
 
   const introductionSectionRef = useRef<HTMLDivElement | null>(null)
@@ -118,7 +117,7 @@ function App() {
         <NavbarSpacer />
         <Headless.Field className="flex float-end items-center gap-2 mr-3 p-3">
           <Label className="dark:opacity-50">Light</Label>
-          <Switch key={isSandboxed ? (darkMode ? 'dark' : 'light') : 'switch'} className="cursor-pointer" checked={darkMode} onChange={toggleDarkMode} />
+          <Switch className="cursor-pointer" checked={darkMode} onChange={toggleDarkMode} />
           <Label className="opacity-50 dark:opacity-100">Dark</Label>
         </Headless.Field>
       </Navbar>
