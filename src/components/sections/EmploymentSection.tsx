@@ -60,7 +60,7 @@ function EmploymentSection({ ref }: EmploymentSectionProps) {
               <h1 className="float-right">2020 - Present</h1>
             </div>
             <h1 className="text-left italic">Greenville, Texas</h1>
-            <h1 className="text-left italic">Sr. Associate Software Engineer</h1>
+            <h1 className="text-left italic">Specialist, Software Engineer</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
