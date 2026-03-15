@@ -22,11 +22,11 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         Take a look around!
       </p>
       <br/><br/>
-      <div className="mx-auto aspect-[3.4/4.25] max-h-[50vh]">
+      <div className="mx-auto aspect-[3.4/4.25] max-h-[35vh] sm:max-h-[50vh]">
         <ImageWithSpinner 
           src={pic}
           alt="Professional Headshot"
-          className="rounded-xl border-2 max-h-[50vh]"
+          className="rounded-xl border-2 max-h-[35vh] sm:max-h-[50vh]"
         />
       </div>
     </div>
