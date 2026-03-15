@@ -22,7 +22,7 @@ function IntroductionSection({ ref }: IntroductionSectionProps) {
         Take a look around!
       </p>
       <br/><br/>
-      <div className="w-[50%] mx-auto">
+      <div className="w-[50%] mx-auto aspect-[3.4/4.25] max-h-[50vh]">
         <ImageWithSpinner 
           src={pic}
           alt="Professional Headshot"
