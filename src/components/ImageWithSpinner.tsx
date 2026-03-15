@@ -39,7 +39,7 @@ function ImageWithSpinner({ src, alt, className = '', spinnerClassName = '' }: I
   }, [src]);
 
   return (
-    <div className="relative flex justify-center w-full">
+    <div className="relative justify-center items-center w-full h-full">
       {!loaded && (
         <div className={`absolute inset-0 flex items-center justify-center ${spinnerClassName}`}>
           <LoadingSpinner />
