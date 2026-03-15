@@ -160,7 +160,7 @@ img.loaded {
 }
 
 .tech-icon {
-    @apply size-12 md:size-14 pb-2
+    @apply size-12 md:size-14 pb-2 opacity-100
 }
 .tech-icon-container {
     @apply mx-auto my-3

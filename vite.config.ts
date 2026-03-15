@@ -4,7 +4,12 @@ import svgr from "vite-plugin-svgr";
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [react(),
-      svgr(),
-      tailwindcss()]
+  plugins: [
+    react(),
+    svgr({
+      include: /\.svg\?react$/,
+    }),
+    tailwindcss()
+  ],
+  assetsInclude: ['**/*.svg']
 })
